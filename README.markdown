@@ -1,5 +1,5 @@
-## HTTP Server
+# HTTP Server
 
-# Written to host Tic Tac Toe Games
+### Made to host Tic Tac Toe Games
 
 Written in Java
