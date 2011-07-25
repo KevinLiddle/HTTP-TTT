@@ -23,7 +23,7 @@
     <junit>
       <classpath refid="CLASSPATH" />
       <formatter type="brief" usefile="false" />
-      <test name="ServerTest" />
+      <test name="httpTTT.ServerTest" />
     </junit>
   </target>
 
