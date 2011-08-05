@@ -1,6 +1,4 @@
-package httpTTT;
-
-import com.sun.xml.internal.fastinfoset.algorithm.BooleanEncodingAlgorithm;
+package TTTServer;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -13,6 +11,12 @@ public class Server implements Runnable {
   private int connections = 0;
   private ConnectionServer connectionServer;
   private boolean running = false;
+
+  public static void main(String args[]) throws Exception {
+    SocketCommunication client = new SocketCommunication();
+    Server server = new Server(3000, client);
+    server.start();
+  }
 
   public Server(int _port, ConnectionServer connectionServer) throws Exception {
     this.connectionServer = connectionServer;
@@ -61,7 +65,7 @@ public class Server implements Runnable {
     try {
       Thread.sleep(10); // let close finish
     } catch (InterruptedException e1) {
-
+      System.out.println("Thread cannot sleep.");
     }
   }
 
@@ -78,9 +82,9 @@ public class Server implements Runnable {
     public void run() {
       try {
         connectionServer.serve(clientSocket);
-        clientSocket.close();
+        connectionServer.close(clientSocket);
       } catch (Exception e) {
-        System.out.println("HORRORS!");
+        System.out.println("Server Error!");
       }
 
     }

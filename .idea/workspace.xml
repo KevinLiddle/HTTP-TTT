@@ -2,27 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="474c3353-c0ae-4abf-a8c6-54aa63670955" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/projectCodeStyle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTTP_TTT.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/httpTTT/ConnectionServer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/httpTTT/Server.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/httpTTT/ServerTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Server.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ServerTest.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MockServer.java" afterPath="$PROJECT_DIR$/src/httpTTT/MockServer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MockServerSocket.java" afterPath="$PROJECT_DIR$/src/httpTTT/MockServerSocket.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MockSocket.java" afterPath="$PROJECT_DIR$/src/httpTTT/MockSocket.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TTTServer/SocketCommunicationTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/httpTTT/MockServer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/httpTTT/MockServerSocket.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/httpTTT/MockSocket.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/httpTTT/ConnectionServer.java" afterPath="$PROJECT_DIR$/src/TTTServer/ConnectionServer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/httpTTT/Server.java" afterPath="$PROJECT_DIR$/src/TTTServer/Server.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/httpTTT/ServerTest.java" afterPath="$PROJECT_DIR$/src/TTTServer/ServerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HTTP_TTT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,28 +69,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ServerTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/httpTTT/ServerTest.java">
+      <file leaf-file-name="SocketCommunication.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TTTServer/SocketCommunication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="24" selection-start="2968" selection-end="2968" vertical-scroll-proportion="0.0">
+            <state line="43" column="9" selection-start="1435" selection-end="1435" vertical-scroll-proportion="0.40582725">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/httpTTT/Server.java">
+      <file leaf-file-name="MovesGUI.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javaTTT/MovesGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="32" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.6566077">
+            <state line="4" column="9" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectionServer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/httpTTT/ConnectionServer.java">
+      <file leaf-file-name="GameState.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javaTTT/GameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="38" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
+            <state line="84" column="8" selection-start="2361" selection-end="2361" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameStateTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javaTTT/GameStateTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="166" column="18" selection-start="3893" selection-end="3893" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -122,9 +119,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/httpTTT/ConnectionServer.java" />
-        <option value="$PROJECT_DIR$/src/httpTTT/Server.java" />
-        <option value="$PROJECT_DIR$/src/httpTTT/ServerTest.java" />
+        <option value="$PROJECT_DIR$/src/javaTTT/Game.java" />
+        <option value="$PROJECT_DIR$/src/javaTTT/GameCL.java" />
+        <option value="$PROJECT_DIR$/src/javaTTT/Moves.java" />
+        <option value="$PROJECT_DIR$/src/javaTTT/MovesCL.java" />
+        <option value="$PROJECT_DIR$/src/TTTServer/SocketCommunicationTest.java" />
+        <option value="$PROJECT_DIR$/src/TTTServer/Server.java" />
+        <option value="$PROJECT_DIR$/src/TTTServer/ServerTest.java" />
+        <option value="$PROJECT_DIR$/src/TTTServer/ConnectionServer.java" />
+        <option value="$PROJECT_DIR$/src/javaTTT/MovesCLTest.java" />
+        <option value="$PROJECT_DIR$/src/javaTTT/BoardTest.java" />
+        <option value="$PROJECT_DIR$/src/javaTTT/Board.java" />
+        <option value="$PROJECT_DIR$/src/javaTTT/GameStateTest.java" />
+        <option value="$PROJECT_DIR$/src/javaTTT/GameState.java" />
+        <option value="$PROJECT_DIR$/src/javaTTT/MovesGUITest.java" />
+        <option value="$PROJECT_DIR$/src/javaTTT/MovesGUI.java" />
+        <option value="$PROJECT_DIR$/src/TTTServer/SocketCommunication.java" />
       </list>
     </option>
   </component>
@@ -139,7 +149,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -159,6 +169,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Favorites" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -192,13 +203,48 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="httpTTT" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TTTServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaTTT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,48 +254,27 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.sourceCode.General" />
+    <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="httpTTT" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServerTest">
-    <configuration default="false" name="ServerTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="HTTP_TTT" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="httpTTT" />
-      <option name="MAIN_CLASS_NAME" value="httpTTT.ServerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.Server">
     <configuration default="false" name="ServerTest.givenStartedServer_ClientCanConnect" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="HTTP_TTT" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="httpTTT" />
-      <option name="MAIN_CLASS_NAME" value="httpTTT.ServerTest" />
+      <option name="PACKAGE_NAME" value="TTTServer" />
+      <option name="MAIN_CLASS_NAME" value="TTTServer.ServerTest" />
       <option name="METHOD_NAME" value="givenStartedServer_ClientCanConnect" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
@@ -270,8 +295,8 @@
       <module name="HTTP_TTT" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="httpTTT" />
-      <option name="MAIN_CLASS_NAME" value="httpTTT.ServerTest" />
+      <option name="PACKAGE_NAME" value="TTTServer" />
+      <option name="MAIN_CLASS_NAME" value="TTTServer.ServerTest" />
       <option name="METHOD_NAME" value="givenStartedServer_ConnectionsShouldBeZeroAtFirst" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
@@ -292,9 +317,53 @@
       <module name="HTTP_TTT" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="httpTTT" />
-      <option name="MAIN_CLASS_NAME" value="httpTTT.ServerTest" />
+      <option name="PACKAGE_NAME" value="TTTServer" />
+      <option name="MAIN_CLASS_NAME" value="TTTServer.ServerTest" />
       <option name="METHOD_NAME" value="givenAConnectedServer_canSendString" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GameStateTest.emptyBoardReturnsTrueForEmptyBoard" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="HTTP_TTT" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="javaTTT" />
+      <option name="MAIN_CLASS_NAME" value="javaTTT.GameStateTest" />
+      <option name="METHOD_NAME" value="emptyBoardReturnsTrueForEmptyBoard" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="BoardTest.clearsTheBoard" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="HTTP_TTT" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="javaTTT" />
+      <option name="MAIN_CLASS_NAME" value="javaTTT.BoardTest" />
+      <option name="METHOD_NAME" value="clearsTheBoard" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -341,16 +410,16 @@
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="MAIN_CLASS_NAME" value="Server" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
+      <module name="HTTP_TTT" />
       <envs />
       <method>
         <option name="AntTarget" enabled="false" />
@@ -384,11 +453,99 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ServerTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ServerTest.givenStartedServer_ClientCanConnect" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ServerTest.givenStartedServer_ConnectionsShouldBeZeroAtFirst" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ServerTest.givenAConnectedServer_canSendString" />
+    <configuration default="false" name="Server" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="TTTServer.Server" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="HTTP_TTT" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CLGame" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="javaTTT.GameCL" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="HTTP_TTT" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="All Tests" type="JUnit" factoryName="JUnit">
+      <module name="HTTP_TTT" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="TTTServer" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+      <dir value="$PROJECT_DIR$/src" />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55681" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SocketCommunicationTest" type="JUnit" factoryName="JUnit">
+      <module name="HTTP_TTT" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="TTTServer" />
+      <option name="MAIN_CLASS_NAME" value="TTTServer.SocketCommunicationTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="9">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ServerTest.givenStartedServer_ClientCanConnect" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ServerTest.givenStartedServer_ConnectionsShouldBeZeroAtFirst" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ServerTest.givenAConnectedServer_canSendString" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Server" />
+      <item index="4" class="java.lang.String" itemvalue="Application.CLGame" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.All Tests" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.SocketCommunicationTest" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.GameStateTest.emptyBoardReturnsTrueForEmptyBoard" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.BoardTest.clearsTheBoard" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -422,26 +579,46 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1108" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959914" sideWeight="0.67070705" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17691074" sideWeight="0.32626262" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17691074" sideWeight="0.67070705" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.9994658" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -493,36 +670,116 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/httpTTT/MockSocket.java">
+    <entry file="file://$PROJECT_DIR$/src/TTTServer/ConnectionServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/httpTTT/MockServerSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/httpTTT/MockServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/httpTTT/ConnectionServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="38" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/httpTTT/ServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="24" selection-start="2968" selection-end="2968" vertical-scroll-proportion="0.0">
+        <state line="7" column="2" selection-start="134" selection-end="134" vertical-scroll-proportion="0.109261185">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/httpTTT/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/TTTServer/ServerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="32" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.6566077">
+        <state line="107" column="0" selection-start="2695" selection-end="2695" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaTTT/MovesCLTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="41" selection-start="516" selection-end="516" vertical-scroll-proportion="0.28095734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaTTT/DrawHTML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="3" selection-start="435" selection-end="435" vertical-scroll-proportion="0.23413111">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaTTT/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="3" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaTTT/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="28" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaTTT/DrawCL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="31" selection-end="31" vertical-scroll-proportion="0.031217482">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaTTT/GameStateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="166" column="18" selection-start="3893" selection-end="3893" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaTTT/GameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="8" selection-start="2361" selection-end="2361" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaTTT/GameCL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="5" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.6555671">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaTTT/MovesGUITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="42" selection-start="882" selection-end="882" vertical-scroll-proportion="0.54630595">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaTTT/Moves.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="47" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaTTT/MovesCL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="27" selection-start="231" selection-end="231" vertical-scroll-proportion="0.17169616">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TTTServer/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="11" selection-start="2158" selection-end="2158" vertical-scroll-proportion="0.7960458">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaTTT/MovesGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="9" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TTTServer/SocketCommunication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="9" selection-start="1435" selection-end="1435" vertical-scroll-proportion="0.40582725">
           <folding />
         </state>
       </provider>
