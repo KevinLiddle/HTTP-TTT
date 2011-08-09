@@ -1,4 +1,4 @@
-package TTTServer;
+package HTTPServer;
 
 import org.junit.After;
 import org.junit.Before;

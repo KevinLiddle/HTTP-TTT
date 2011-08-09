@@ -1,4 +1,6 @@
-package javaTTT;
+package javaTTT.draw;
+
+import javaTTT.Board;
 
 public abstract class Draw {
 

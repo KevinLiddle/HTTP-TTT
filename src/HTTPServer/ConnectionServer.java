@@ -1,4 +1,4 @@
-package TTTServer;
+package HTTPServer;
 
 import java.net.Socket;
 

@@ -1,4 +1,4 @@
-package TTTServer;
+package HTTPServer;
 
 import org.junit.After;
 import org.junit.Before;
@@ -33,13 +33,6 @@ public class SocketCommunicationTest {
   @After
   public void tearDown() throws Exception {
     server.closeServerSocket();
-  }
-
-  @Test
-  public void serveTakesAnInputStream() throws Exception {
-    ps.println("GET / HTTP/1.0");
-    waitToSend();
-    assertArrayEquals(new String[] {"GET", "/", "HTTP/1.0"}, client.request);
   }
 
   @Test

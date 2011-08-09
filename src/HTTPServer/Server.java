@@ -1,4 +1,4 @@
-package TTTServer;
+package HTTPServer;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -52,7 +52,7 @@ public class Server implements Runnable {
     } catch (SocketException e) {
       waitForClose();
     } catch (Exception e) {
-      System.out.println("Could not connect to server at port: " + serverSocket.getLocalPort());
+      System.out.println("Could not connect to server.");
       System.exit(-1);
     }
   }
@@ -84,7 +84,7 @@ public class Server implements Runnable {
         connectionServer.serve(clientSocket);
         connectionServer.close(clientSocket);
       } catch (Exception e) {
-        System.out.println("Server Error!");
+        System.out.println(e);
       }
 
     }
