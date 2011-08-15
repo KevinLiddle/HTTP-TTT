@@ -15,6 +15,12 @@ public class MachinePlayer extends Player {
     double[] movesScores = new double[board.openSpaces()];
     int[][] possibleMoves = new int[board.openSpaces()][2];
 
+    if(GameState.empty(board)){
+      int[] topRightCorner = {0,0};
+      setMove(topRightCorner);
+      return 0;
+    }
+
     if(GameState.finished(board)){
       return (1.0/depth)*GameState.winner(board);
     }

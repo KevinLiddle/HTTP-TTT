@@ -71,9 +71,9 @@ public class DrawHTMLTest {
   @Test
   public void drawComputerMoveLinkWhenNecessary() {
     game = new GameGUI("/HumanVsComputer");
-    assertFalse(DrawHTML.draw(game).contains("<a id=\"link\" href=\"/ComputerMove\">Computer Move</a>"));
+    assertFalse(DrawHTML.draw(game).contains("<a id=\"button\" href=\"/ComputerMove\">Computer Move</a>"));
     game.turn = -1;
-    assertTrue(DrawHTML.draw(game).contains("<a id=\"link\" href=\"/ComputerMove\">Computer Move</a>"));
+    assertTrue(DrawHTML.draw(game).contains("<a id=\"button\" href=\"/ComputerMove\">Computer Move</a>"));
   }
 
   @Test
@@ -98,7 +98,7 @@ public class DrawHTMLTest {
       "<td><p id=\"board_links\">-</p></td>\n" +
       "</tr>\n" +
       "</table><br />" +
-      "<a id=\"link\" href=\"/ComputerMove\">Computer Move</a>" + htmlFooter;
+      "<a id=\"button\" href=\"/ComputerMove\">Computer Move</a>" + htmlFooter;
     assertEquals(computerTurnBoard, DrawHTML.draw(game));
   }
 

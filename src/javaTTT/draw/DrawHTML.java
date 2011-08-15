@@ -33,12 +33,12 @@ public class DrawHTML extends Draw {
       "            font-size: 1.5em;}" +
       "        #button {" +
       "            color: #463E3F;" +
-      "            border: inset;" +
-    "              background-color: #FFFFFF;" +
+      "            border: outset;" +
+    "              background-color: #E6E6E6;" +
     "              text-decoration: none;}" +
     "          #button:active {" +
-    "              background-color: #278568;" +
-    "              border: outset;}" +
+    "              background-color: #BDBDBD;" +
+    "              border: inset;}" +
       "    </style>";
   
   public static String draw(GameGUI game) {

@@ -75,6 +75,14 @@ public class SocketCommunicationTest {
       "            color: #32A5F5;\n" +
       "            text-decoration: none;" +
       "            font-size: 1.5em;}" +
+      "        #button {" +
+      "            color: #463E3F;" +
+      "            border: outset;" +
+    "              background-color: #E6E6E6;" +
+    "              text-decoration: none;}" +
+    "          #button:active {" +
+    "              background-color: #BDBDBD;" +
+    "              border: inset;}" +
       "    </style>" +
       "</head><body><table>\n" +
       "<tr>\n" +
