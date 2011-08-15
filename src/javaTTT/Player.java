@@ -3,23 +3,21 @@ package javaTTT;
 public abstract class Player {
 
   public int playerValue;
-  public String playerName;
+  public String name;
+  public int[] move;
 
-  public Player(int playerValue, String playerName) {
+  public Player(int playerValue) {
     this.playerValue = playerValue;
-    this.playerName = playerName;
   }
 
-  public int playerValue() {
-    return playerValue;
+  public void setMove(int[] move) {
+    this.move  = move;
   }
 
-  public String playerName() {
-    return playerName;
+  public void setName(String name) {
+    this.name = name;
   }
 
-  public abstract int[] move();
-
-  public abstract void setMove(int[] move);
+  public abstract int[] move(Board board);
 
 }

@@ -31,4 +31,15 @@ public class Board {
       }
     }
   }
+
+  public int openSpaces() {
+    int openSpaces = 0;
+    for(int i=0; i < dimension; i++){
+      for(int j=0; j < dimension; j++){
+        if(cellValueAt(new int[] {i,j}) == 0)
+          openSpaces++;
+      }
+    }
+    return openSpaces;
+  }
 }

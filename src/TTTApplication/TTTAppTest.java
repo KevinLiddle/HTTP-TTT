@@ -13,7 +13,7 @@ public class TTTAppTest {
   @Before
   public void setUp() {
     app = new TTTApp();
-    app.game = new GameGUI();
+    app.game = new GameGUI("/HumanVsHuman");
   }
 
   @Test

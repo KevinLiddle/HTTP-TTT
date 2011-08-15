@@ -6,14 +6,12 @@ import java.util.Scanner;
 
 public class HumanPlayerCL extends Player {
 
-  int[] move;
-
-  public HumanPlayerCL(int playerValue, String playerName){
-    super(playerValue, playerName);
+  public HumanPlayerCL(int playerValue){
+    super(playerValue);
   }
 
-  public int[] move() {
-    System.out.print(playerName + ", please enter a move (i.e.: 1,2): ");
+  public int[] move(Board board) {
+    System.out.print(name + ", please enter a move (i.e.: 1,2): ");
     setMove(promptForMove(System.in));
     return this.move;
   }
@@ -32,10 +30,6 @@ public class HumanPlayerCL extends Player {
       }
     }
     return move;
-  }
-
-  public void setMove(int[] move) {
-    this.move = move;
   }
 
 }

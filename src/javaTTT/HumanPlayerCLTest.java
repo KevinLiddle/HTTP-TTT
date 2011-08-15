@@ -15,14 +15,13 @@ public class HumanPlayerCLTest {
 
   @Before
   public void setUp(){
-    player = new HumanPlayerCL(1, "Kevin");
+    player = new HumanPlayerCL(1);
   }
 
   @Test
   public void testHumanPlayerConstructor() {
     assertTrue( player != null );
-    assertEquals( 1, player.playerValue() );
-    assertEquals( "Kevin", player.playerName() );
+    assertEquals( 1, player.playerValue );
   }
 
   private static void inputTest(String input) {

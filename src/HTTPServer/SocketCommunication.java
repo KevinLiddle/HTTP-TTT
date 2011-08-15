@@ -19,7 +19,8 @@ public class SocketCommunication implements ConnectionServer {
                   "Content-Type: text/html\n" +
                   "\n";
     os = new DataOutputStream(connection.getOutputStream());
-    os.writeBytes(output + app.serverResponse(request));
+    output += app.serverResponse(request);
+    os.writeBytes(output);
   }
 
   public synchronized void close(Socket connection) throws Exception {
@@ -29,7 +30,8 @@ public class SocketCommunication implements ConnectionServer {
   private synchronized String[] request(Socket connection) throws Exception {
     InputStreamReader isr = new InputStreamReader(connection.getInputStream());
     BufferedReader br = new BufferedReader(isr);
-    return br.readLine().split(" ");
+    String line = br.readLine();
+    return line.split(" ");
   }
 
 

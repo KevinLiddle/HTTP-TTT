@@ -27,7 +27,7 @@ public class DrawCLTest {
     int[][] moves = {{0,0},{1,0},{2,2},{0,2},{1,1}};
     int[] values = {1,1,1,-1,-1};
     for(int i = 0; i < moves.length; i++)
-      game.moves.board.setCellValue(moves[i], values[i]);
+      game.board.setCellValue(moves[i], values[i]);
     String drawnBoard = "[X][ ][O]\n[X][O][ ]\n[ ][ ][X]\n";
     String actualBoard = DrawCL.draw(game);
     assertEquals( drawnBoard, actualBoard );

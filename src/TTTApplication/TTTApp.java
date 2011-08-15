@@ -1,6 +1,7 @@
 package TTTApplication;
 
 import javaTTT.GameGUI;
+import javaTTT.MachinePlayer;
 import javaTTT.draw.DrawHTML;
 
 import java.io.BufferedReader;
@@ -24,29 +25,7 @@ public class TTTApp extends Application {
     return output;
   }
 
-  private BufferedReader handleRequests(String[] request) throws Exception {
-    BufferedReader content = null;
-
-    if(request[0].equals("GET")){
-      if(request[1].equals("/")){
-        content = new BufferedReader(new InputStreamReader(new FileInputStream(viewsRoot + "home.html")));
-      }
-      else if(request[1].equals("/HumanVsHuman")){
-        game = new GameGUI();
-        content = new BufferedReader(new StringReader(DrawHTML.draw(game)));
-      }
-      else if(request[1].matches(validBoardURIs())){
-        game.takeTurn(game.parseMoveRequest(request[1]));
-        content = new BufferedReader(new StringReader(DrawHTML.draw(game)));
-      }
-      else {
-        content = new BufferedReader(new InputStreamReader(new FileInputStream(viewsRoot + "404NotFound.html")));
-      }
-    }
-    return content;
-  }
-
-  public String status(String URI) {
+  public synchronized String status(String URI) {
     String[] validURIs = {"/", "/HumanVsHuman", validBoardURIs()};
     for(String validURI : validURIs){
       if(URI.matches(validURI))
@@ -54,14 +33,65 @@ public class TTTApp extends Application {
     }
     return NOT_FOUND;
   }
+  
+  private synchronized BufferedReader handleRequests(String[] request) throws Exception {
+
+    if(request[0].equals("GET")){
+      if(request[1].equals("/"))
+        return home();
+      else if(validGameTypeURI(request[1]))
+        return newGame(request[1]);
+      else if(request[1].matches(validBoardURIs()))
+        return humanMove(request[1]);
+      else if(request[1].equals("/ComputerMove"))
+        return computerMove();
+    }
+    return notFound();
+  }
 
   private String validBoardURIs() {
     int maxBoardCellIndex;
     String pattern = "";
     if(game != null){
-      maxBoardCellIndex = game.moves.board.dimension - 1;
+      maxBoardCellIndex = game.board.dimension - 1;
       pattern = "/board\\?row=[0-" + maxBoardCellIndex + "]&column=[0-" + maxBoardCellIndex + "]";
     }
     return pattern;
   }
+
+  private boolean validGameTypeURI(String URI) {
+    String[] validGameTypes = {"/HumanVsHuman", "/HumanVsComputer", "/ComputerVsHuman", "/ComputerVsComputer"};
+    for(String gameType : validGameTypes){
+      if(gameType.equals(URI))
+        return true;
+    }
+    return false;
+  }
+
+  private BufferedReader home() throws Exception {
+    return new BufferedReader(new InputStreamReader(new FileInputStream(viewsRoot + "home.html")));
+  }
+
+  private BufferedReader newGame(String request) {
+    game = new GameGUI(request);
+    return new BufferedReader(new StringReader(DrawHTML.draw(game)));
+  }
+
+  private BufferedReader humanMove(String request) {
+    game.takeTurn(game.parseMoveRequest(request));
+    return new BufferedReader(new StringReader(DrawHTML.draw(game)));
+  }
+
+  private BufferedReader computerMove() {
+    if(game.player1 instanceof MachinePlayer)
+      game.takeTurn(game.player1.move(game.board));
+    else if(game.player2 instanceof MachinePlayer)
+      game.takeTurn(game.player2.move(game.board));
+    return new BufferedReader(new StringReader(DrawHTML.draw(game)));
+  }
+
+  private BufferedReader notFound() throws Exception {
+    return new BufferedReader(new InputStreamReader(new FileInputStream(viewsRoot + "404NotFound.html")));
+  }
+
 }

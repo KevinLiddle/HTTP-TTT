@@ -38,5 +38,15 @@ public class BoardTest {
     assertEquals( 0, board.cellValueAt(cell));
   }
 
+  @Test
+  public void openSpacesReturnsNumberOfOpenSpaces() {
+    board.setCellValue(new int[] {0,0}, 1);
+    board.setCellValue(new int[] {1,0}, 1);
+    board.setCellValue(new int[] {0,1}, -1);
+    board.setCellValue(new int[] {2,1}, -1);
+
+    assertEquals(5, board.openSpaces());
+  }
+
 
 }

@@ -2,17 +2,11 @@ package javaTTT;
 
 public class HumanPlayerGUI extends Player {
 
-  private int[] move;
-
-  public HumanPlayerGUI(int playerValue, String playerName) {
-    super(playerValue, playerName);
+  public HumanPlayerGUI(int playerValue) {
+    super(playerValue);
   }
 
-  public int[] move() {
+  public int[] move(Board board) {
     return this.move;
-  }
-
-  public void setMove(int[] move){
-    this.move = move;
   }
 }
