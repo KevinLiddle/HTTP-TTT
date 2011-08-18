@@ -1,0 +1,44 @@
+body {
+    background-color: #282828;
+    font-family: \"Century Gothic\";
+    text-align: center;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    width: 20%;
+}
+td {
+    color: #FFFFFF;
+    font-size: 3em;
+    text-align: center;
+    width: 33%;
+}
+#board_links {
+    color: #32A5F5;
+    text-decoration: none;
+    opacity: 0;
+}
+p {
+    color: #FFFFFF;
+}
+#link {
+    color: #32A5F5;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+#button {
+    color: #463E3F;
+    border: outset;
+    background-color: #E6E6E6;
+    text-decoration: none;
+}
+#button:active {
+    background-color: #BDBDBD;
+    border: inset;
+}
+.home {
+    position: relative;
+    bottom: -10em;
+}

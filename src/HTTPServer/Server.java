@@ -1,5 +1,7 @@
 package HTTPServer;
 
+import Application.TTTApp;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -7,13 +9,13 @@ import java.net.SocketException;
 
 public class Server implements Runnable {
 
-  ServerSocket serverSocket;
+  public ServerSocket serverSocket;
   private int connections = 0;
   private ConnectionServer connectionServer;
   private boolean running = false;
 
   public static void main(String args[]) throws Exception {
-    SocketCommunication client = new SocketCommunication();
+    SocketCommunication client = new SocketCommunication(new TTTApp());
     Server server = new Server(3000, client);
     server.start();
   }
