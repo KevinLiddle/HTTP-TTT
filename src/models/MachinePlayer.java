@@ -20,7 +20,6 @@ public class MachinePlayer extends Player {
       setMove(topRightCorner);
       return 0;
     }
-
     if(GameState.finished(board)){
       return (1.0/depth)*GameState.winner(board);
     }

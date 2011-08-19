@@ -25,7 +25,9 @@ public class TTTApp extends Application {
   }
 
   public synchronized String status(String URI) {
-    String[] validURIs = {"/", validBoardURIs(), "/HumanVsHuman", "/HumanVsComputer", "/ComputerVsHuman", "/ComputerVsComputer", "/home.css", "/game.css", "/notFound.css"};
+    String[] validURIs = {"/", validBoardURIs(), "/HumanVsHuman", "/HumanVsComputer", "/ComputerVsHuman",
+                          "/ComputerVsComputer", "/ComputerMove", "/home.css", "/game.css", "/notFound.css",
+                          "/machinePlayer.js", "/jquery.js"};
     for(String validURI : validURIs){
       if(URI.matches(validURI))
         return OK;
@@ -44,9 +46,10 @@ public class TTTApp extends Application {
         return humanMove(request[1]);
       else if(request[1].equals("/ComputerMove"))
         return computerMove();
-      else if(request[1].endsWith(".css")){
+      else if(request[1].endsWith(".css"))
         return stylesheets(request[1]);
-      }
+      else if(request[1].endsWith(".js"))
+        return javascripts(request[1]);
     }
     return notFound();
   }
@@ -111,6 +114,10 @@ public class TTTApp extends Application {
 
   private BufferedReader stylesheets(String request) throws Exception {
     return new BufferedReader(new FileReader(new File(viewsRoot + "stylesheets" + request)));
+  }
+
+  private BufferedReader javascripts(String request) throws Exception {
+    return new BufferedReader(new FileReader(new File(viewsRoot + "javascripts" + request)));
   }
 
 }

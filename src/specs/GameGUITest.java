@@ -33,4 +33,15 @@ public class GameGUITest {
     game.takeTurn(game.player1.move(game.board));
     assertTrue(GameState.empty(game.board));
   }
+
+  @Test
+  public void machineMovesAutomatically() {
+    game = new GameGUI("/HumanVsComputer");
+    game.player1.setMove(new int[] {0,0});
+    game.takeTurn(game.player1.move(game.board));
+    assertEquals(1, game.board.cellValueAt(new int[] {0,0}));
+    assertEquals(-1, game.board.cellValueAt(new int[] {1,1}));
+  }
+
+
 }

@@ -15,7 +15,7 @@ td {
     text-align: center;
     width: 33%;
 }
-#board_links {
+.board_links {
     color: #32A5F5;
     text-decoration: none;
     opacity: 0;
@@ -23,22 +23,22 @@ td {
 p {
     color: #FFFFFF;
 }
-#link {
+.link {
     color: #32A5F5;
     text-decoration: none;
     font-size: 1.5em;
 }
-#button {
+.button {
     color: #463E3F;
     border: outset;
     background-color: #E6E6E6;
     text-decoration: none;
 }
-#button:active {
+.button:active {
     background-color: #BDBDBD;
     border: inset;
 }
-.home {
+#home {
     position: relative;
     bottom: -10em;
 }

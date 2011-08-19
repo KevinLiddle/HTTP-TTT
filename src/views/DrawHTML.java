@@ -2,8 +2,8 @@ package views;
 
 import models.GameGUI;
 import models.GameState;
-import models.MachinePlayer;
-import models.Player;
+
+import java.util.Arrays;
 
 public class DrawHTML extends Draw {
   
@@ -11,6 +11,8 @@ public class DrawHTML extends Draw {
     String drawnBoard = "<html><head>" +
       "<title>Tic Tac Toe</title>" +
       "<link rel=\"stylesheet\" href=\"game.css\" type=\"text/css\" />" +
+      "<script src=\"jquery.js\" type=\"text/javascript\"></script>" +
+      "<script src=\"machinePlayer.js\" type=\"text/javascript\"></script>" +
       "</head><body><table border=\"2\" bordercolor=\"#32A5F5\">\n";
     for (int i = 0; i < game.board.dimension; i++) {
       drawnBoard += "<tr>\n";
@@ -23,10 +25,7 @@ public class DrawHTML extends Draw {
 
     if(GameState.finished(game.board))
       drawnBoard += gameOverMessage(game);
-    else if(displayComputerMoveLink(game)){
-      drawnBoard += "<br /><a id=\"button\" href=\"/ComputerMove\">Computer Move</a>";
-    }
-    return drawnBoard + "<br /><a id=\"link\" class=\"home\" href=\"/\">Home</a></body></html>";
+    return drawnBoard + "<br /><a id=\"home\" class=\"link\" href=\"/\">Home</a></body></html>";
   }
 
   public static String gameOverMessage(GameGUI game) {
@@ -38,30 +37,24 @@ public class DrawHTML extends Draw {
     else
       message += "<p>" + "Cat's Game...</p>";
     message += "<br />" +
-               "<a id=\"link\" href=\"" + game.gameType + "\">Rematch</a>";
+               "<a class=\"link\" href=\"" + game.gameType + "\">Rematch</a>";
     return message;
   }
 
   private static String markerHTML(GameGUI game, int row, int column) {
     String value = marker(game.board, row, column);
-    if(value != " ")
-      return "<p>" + value + "</p>";
-    else if(GameState.finished(game.board) || computerPlayerTurn(game))
-      return "<p id=\"board_links\">-</p>";
-    else
-      return "<a id=\"board_links\" href=\"/board?row=" + row + "&column=" + column + "\">----</a>";
-  }
-
-  private static boolean displayComputerMoveLink(GameGUI game) {
-    return (game.player1 instanceof MachinePlayer && game.turn == game.player1.playerValue)
-        || (game.player2 instanceof MachinePlayer && game.turn == game.player2.playerValue);
-  }
-
-  private static boolean computerPlayerTurn(GameGUI game) {
-    for(Player player : new Player[] {game.player1, game.player2}){
-      if(player.playerValue == game.turn && player instanceof MachinePlayer)
-        return true;
+    if(value != " "){
+      return "<p class=\"" + moveType(game, row, column) + "marker\">" + value + "</p>";
     }
-    return false;
+    else if(GameState.finished(game.board))
+      return "<p class=\"board_links\">-</p>";
+    else
+      return "<a class=\"board_links\" href=\"/board?row=" + row + "&column=" + column + "\">----</a>";
+  }
+
+  private static String moveType(GameGUI game, int row, int column) {
+    if(Arrays.equals(game.lastMove, new int[]{row, column}))
+      return "last_computer_";
+    return "";
   }
 }

@@ -5,6 +5,7 @@ public class GameGUI extends Game {
   public String gameType;
   public String[] validGameTypes = {"/HumanVsHuman", "/HumanVsComputer", "/ComputerVsHuman", "/ComputerVsComputer"};
   public int turn;
+  public int[] lastMove;
 
   public GameGUI(String _gameType) {
     board = new Board();
@@ -14,15 +15,16 @@ public class GameGUI extends Game {
   }
 
   public synchronized void takeTurn(int[] move) {
-    Player player;
-    if(turn == player1.playerValue)
-      player = player1;
-    else
-      player = player2;
+    Player player = findPlayerByTurn();
     player.setMove(move);
-    if(valid(player.move(board))){
-      board.setCellValue( player.move(board), player.playerValue );
+    if(valid(lastMove = player.move(board))){
+      board.setCellValue( lastMove, player.playerValue );
       turn *= -1;
+      if((player = findPlayerByTurn()) instanceof MachinePlayer){
+        lastMove = player.move(board);
+        board.setCellValue(lastMove, player.playerValue);
+        turn *= -1;
+      }
     }
   }
 
@@ -39,6 +41,7 @@ public class GameGUI extends Game {
       else if(gameType.equals("/ComputerVsHuman")){
         player1 = new MachinePlayer(PLAYER_1_VALUE);
         player2 = new HumanPlayerGUI(PLAYER_2_VALUE);
+        takeTurn(null);
       }
       else if(gameType.equals("/ComputerVsComputer")){
         player1 = new MachinePlayer(PLAYER_1_VALUE);
@@ -59,5 +62,12 @@ public class GameGUI extends Game {
         return true;
     }
     return false;
+  }
+
+  private Player findPlayerByTurn() {
+    if(turn == player1.playerValue)
+      return player1;
+    else
+      return player2;
   }
 }

@@ -2,38 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="474c3353-c0ae-4abf-a8c6-54aa63670955" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/specs/SocketCommunicationTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/HTTPServer/SocketCommunicationTest.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/HTTPServer/ServerTest.java" afterPath="$PROJECT_DIR$/src/specs/ServerTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/TTTApplication/Application.java" afterPath="$PROJECT_DIR$/src/Application/Application.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/TTTApplication/TTTApp.java" afterPath="$PROJECT_DIR$/src/Application/TTTApp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/TTTApplication/TTTAppTest.java" afterPath="$PROJECT_DIR$/src/specs/TTTAppTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/Board.java" afterPath="$PROJECT_DIR$/src/models/Board.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/BoardTest.java" afterPath="$PROJECT_DIR$/src/specs/BoardTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/Game.java" afterPath="$PROJECT_DIR$/src/models/Game.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/GameCL.java" afterPath="$PROJECT_DIR$/src/models/GameCL.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/GameCLTest.java" afterPath="$PROJECT_DIR$/src/specs/GameCLTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/GameGUI.java" afterPath="$PROJECT_DIR$/src/models/GameGUI.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/GameGUITest.java" afterPath="$PROJECT_DIR$/src/specs/GameGUITest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/GameState.java" afterPath="$PROJECT_DIR$/src/models/GameState.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/GameStateTest.java" afterPath="$PROJECT_DIR$/src/specs/GameStateTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/HumanPlayerCL.java" afterPath="$PROJECT_DIR$/src/models/HumanPlayerCL.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/HumanPlayerCLTest.java" afterPath="$PROJECT_DIR$/src/specs/HumanPlayerCLTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/HumanPlayerGUI.java" afterPath="$PROJECT_DIR$/src/models/HumanPlayerGUI.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/HumanPlayerGUITest.java" afterPath="$PROJECT_DIR$/src/specs/HumanPlayerGUITest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/MachinePlayer.java" afterPath="$PROJECT_DIR$/src/models/MachinePlayer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/MachinePlayerTest.java" afterPath="$PROJECT_DIR$/src/specs/MachinePlayerTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/Player.java" afterPath="$PROJECT_DIR$/src/models/Player.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/draw/Draw.java" afterPath="$PROJECT_DIR$/src/views/Draw.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/draw/DrawCL.java" afterPath="$PROJECT_DIR$/src/views/DrawCL.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/draw/DrawCLTest.java" afterPath="$PROJECT_DIR$/src/specs/DrawCLTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/draw/DrawHTML.java" afterPath="$PROJECT_DIR$/src/views/DrawHTML.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javaTTT/draw/DrawHTMLTest.java" afterPath="$PROJECT_DIR$/src/specs/DrawHTMLTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTPServer/Server.java" afterPath="$PROJECT_DIR$/src/HTTPServer/Server.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTPServer/SocketCommunication.java" afterPath="$PROJECT_DIR$/src/HTTPServer/SocketCommunication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/404NotFound.html" afterPath="$PROJECT_DIR$/src/views/404NotFound.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application/TTTApp.java" afterPath="$PROJECT_DIR$/src/Application/TTTApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/GameGUI.java" afterPath="$PROJECT_DIR$/src/models/GameGUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/MachinePlayer.java" afterPath="$PROJECT_DIR$/src/models/MachinePlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/specs/DrawHTMLTest.java" afterPath="$PROJECT_DIR$/src/specs/DrawHTMLTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/specs/GameGUITest.java" afterPath="$PROJECT_DIR$/src/specs/GameGUITest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/DrawHTML.java" afterPath="$PROJECT_DIR$/src/views/DrawHTML.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/home.html" afterPath="$PROJECT_DIR$/src/views/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/javascripts/machinePlayer.js" afterPath="$PROJECT_DIR$/src/views/javascripts/machinePlayer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/stylesheets/game.css" afterPath="$PROJECT_DIR$/src/views/stylesheets/game.css" />
     </list>
     <ignored path="HTTP_TTT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,28 +70,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TTTApp.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DrawHTML.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/DrawHTML.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="0" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DrawHTMLTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/specs/DrawHTMLTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="3" selection-start="2923" selection-end="2923" vertical-scroll-proportion="1.111811">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameGUI.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/GameGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="34" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameGUITest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/specs/GameGUITest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="43" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TTTApp.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Application/TTTApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="9" selection-start="308" selection-end="308" vertical-scroll-proportion="0.109261185">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="machinePlayer.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/javascripts/machinePlayer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="game.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/stylesheets/game.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="19" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
+            <state line="14" column="0" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -133,22 +129,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/HTTPServer/ConnectionServer.java" />
-        <option value="$PROJECT_DIR$/src/HTTPServer/ServerTest.java" />
-        <option value="$PROJECT_DIR$/src/views/application.css" />
-        <option value="$PROJECT_DIR$/src/views/home.html" />
-        <option value="$PROJECT_DIR$/src/javaTTT/draw/DrawHTMLTest.java" />
-        <option value="$PROJECT_DIR$/src/javaTTT/draw/DrawHTML.java" />
-        <option value="$PROJECT_DIR$/src/views/stylesheets/notFound.css" />
-        <option value="$PROJECT_DIR$/src/views/404NotFound.html" />
         <option value="$PROJECT_DIR$/src/HTTPServer/SocketCommunication.java" />
-        <option value="$PROJECT_DIR$/src/views/stylesheets/game.css" />
-        <option value="$PROJECT_DIR$/src/views/DrawHTML.java" />
         <option value="$PROJECT_DIR$/src/views/DrawHTMLTest.java" />
         <option value="$PROJECT_DIR$/src/HTTPServer/Server.java" />
         <option value="$PROJECT_DIR$/src/javaTTT/Game.java" />
         <option value="$PROJECT_DIR$/src/Application/Application.java" />
+        <option value="$PROJECT_DIR$/src/views/javascripts/jquery.js" />
+        <option value="$PROJECT_DIR$/src/views/stylesheets/game.css" />
         <option value="$PROJECT_DIR$/src/Application/TTTApp.java" />
+        <option value="$PROJECT_DIR$/src/views/stylesheets/home.css" />
+        <option value="$PROJECT_DIR$/src/views/home.html" />
+        <option value="$PROJECT_DIR$/src/views/javascripts/machinePlayer.js" />
+        <option value="$PROJECT_DIR$/src/models/MachinePlayer.java" />
+        <option value="$PROJECT_DIR$/src/specs/GameGUITest.java" />
+        <option value="$PROJECT_DIR$/src/views/DrawHTML.java" />
+        <option value="$PROJECT_DIR$/src/models/GameGUI.java" />
+        <option value="$PROJECT_DIR$/src/specs/DrawHTMLTest.java" />
       </list>
     </option>
   </component>
@@ -183,6 +179,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Favorites" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -232,11 +230,89 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="specs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,9 +327,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -264,29 +340,7 @@
       <recent name="views" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All Tests">
-    <configuration default="false" name="ServerTest.givenStartedServer_ClientCanConnect" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="HTTP_TTT" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="specs" />
-      <option name="MAIN_CLASS_NAME" value="specs.ServerTest" />
-      <option name="METHOD_NAME" value="givenStartedServer_ClientCanConnect" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.Server">
     <configuration default="false" name="ServerTest.givenStartedServer_ConnectionsShouldBeZeroAtFirst" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="HTTP_TTT" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -375,6 +429,28 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="GameGUITest.machineMovesAutomatically" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="HTTP_TTT" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="specs" />
+      <option name="MAIN_CLASS_NAME" value="specs.GameGUITest" />
+      <option name="METHOD_NAME" value="machineMovesAutomatically" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -384,24 +460,6 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -419,6 +477,24 @@
       <OutputType value="CONSOLE" save-to-file="false" />
       <FileType name="XML" />
       <JdkChoice value="FROM_MODULE" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -554,15 +630,15 @@
       <method />
     </configuration>
     <list size="9">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ServerTest.givenStartedServer_ClientCanConnect" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ServerTest.givenStartedServer_ConnectionsShouldBeZeroAtFirst" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ServerTest.givenAConnectedServer_canSendString" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.GameStateTest.emptyBoardReturnsTrueForEmptyBoard" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BoardTest.clearsTheBoard" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Server" />
-      <item index="6" class="java.lang.String" itemvalue="Application.CLGame" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.All Tests" />
-      <item index="8" class="java.lang.String" itemvalue="JUnit.SocketCommunicationTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ServerTest.givenStartedServer_ConnectionsShouldBeZeroAtFirst" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ServerTest.givenAConnectedServer_canSendString" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.GameStateTest.emptyBoardReturnsTrueForEmptyBoard" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BoardTest.clearsTheBoard" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Server" />
+      <item index="5" class="java.lang.String" itemvalue="Application.CLGame" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.All Tests" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.SocketCommunicationTest" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.GameGUITest.machineMovesAutomatically" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -630,9 +706,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17691074" sideWeight="0.32626262" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16087654" sideWeight="0.67070705" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16087654" sideWeight="0.67070705" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.9994658" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32929292" sideWeight="0.9994658" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -687,116 +763,108 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/HTTPServer/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/specs/SocketCommunicationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="9" selection-start="217" selection-end="217" vertical-scroll-proportion="0.17169616">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="29" column="19" selection-start="689" selection-end="689" vertical-scroll-proportion="0.016649324" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="9" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specs/TTTAppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="244" selection-end="244" vertical-scroll-proportion="0.062434964" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTTPServer/SocketCommunication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="110" selection-end="110" vertical-scroll-proportion="0.062434964">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/javascripts/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="48" selection-start="65589" selection-end="65589" vertical-scroll-proportion="0.26898733">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/stylesheets/game.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="19" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
+        <state line="40" column="1" selection-start="647" selection-end="647" vertical-scroll-proportion="0.62434965">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/DrawCLTest.java">
+    <entry file="file://$PROJECT_DIR$/src/views/stylesheets/notFound.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="168" selection-end="168" vertical-scroll-proportion="0.062434964">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/DrawHTMLTest.java">
+    <entry file="file://$PROJECT_DIR$/src/views/stylesheets/home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="68" selection-start="2302" selection-end="2302" vertical-scroll-proportion="0.0010405828">
+        <state line="23" column="19" selection-start="464" selection-end="464" vertical-scroll-proportion="0.35900104">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/views/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="249" selection-end="249" vertical-scroll-proportion="0.18730488">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/GameCLTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="272" selection-end="272" vertical-scroll-proportion="0.062434964">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/GameGUITest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="229" selection-end="229" vertical-scroll-proportion="0.062434964">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/GameStateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="186" selection-end="186" vertical-scroll-proportion="-1.6534859">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/HumanPlayerCLTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="263" selection-end="263" vertical-scroll-proportion="0.062434964">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/HumanPlayerGUITest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="177" selection-end="177" vertical-scroll-proportion="0.062434964">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/MachinePlayerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="224" selection-end="224" vertical-scroll-proportion="0.062434964">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/ServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="24" selection-start="2851" selection-end="2851" vertical-scroll-proportion="1.5764828">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/SocketCommunicationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="19" selection-start="689" selection-end="689" vertical-scroll-proportion="0.016649324">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="9" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/TTTAppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="244" selection-end="244" vertical-scroll-proportion="0.062434964">
+        <state line="24" column="9" selection-start="783" selection-end="783" vertical-scroll-proportion="0.38420492">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/TTTApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="9" selection-start="308" selection-end="308" vertical-scroll-proportion="0.109261185">
+        <state line="14" column="0" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/javascripts/machinePlayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="3" selection-start="100" selection-end="100" vertical-scroll-proportion="0.031217482">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/MachinePlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="3" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.62434965">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specs/GameGUITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="43" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/GameGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="34" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/DrawHTML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specs/DrawHTMLTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="3" selection-start="2923" selection-end="2923" vertical-scroll-proportion="1.111811">
           <folding />
         </state>
       </provider>
