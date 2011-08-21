@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 import views.DrawHTML;
 
+import static junit.framework.Assert.assertTrue;
+
 public class DrawHTMLTest {
 
   GameGUI game;
@@ -69,6 +71,12 @@ public class DrawHTMLTest {
   public void drawPartiallyFilledInBoard() {
     setXWinner();
     Assert.assertEquals(winningBoard, DrawHTML.draw(game));
+  }
+
+  @Test
+  public void drawComputerMoveLinkWhenNecessary() {
+    game = new GameGUI("/ComputerVsComputer");
+    assertTrue(DrawHTML.draw(game).contains("<a class=\"button\" href=\"/ComputerMove\">Computer Moves</a>"));
   }
 
   private void setXWinner() {

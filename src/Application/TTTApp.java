@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 public class TTTApp extends Application {
 
-  final String viewsRoot = "/Users/unclebob/Projects/HTTP_TTT/src/views/";
+  final String viewsRoot = "src/views/";
   public GameGUI game;
 
   public synchronized String serverResponse(String[] request) throws Exception {
@@ -46,9 +46,9 @@ public class TTTApp extends Application {
         return humanMove(request[1]);
       else if(request[1].equals("/ComputerMove"))
         return computerMove();
-      else if(request[1].endsWith(".css"))
+      else if(request[1].matches("/.*\\w+.css"))
         return stylesheets(request[1]);
-      else if(request[1].endsWith(".js"))
+      else if(request[1].matches("/.*\\w+.js"))
         return javascripts(request[1]);
     }
     return notFound();

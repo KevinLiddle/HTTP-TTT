@@ -2,6 +2,7 @@ package views;
 
 import models.GameGUI;
 import models.GameState;
+import models.MachinePlayer;
 
 import java.util.Arrays;
 
@@ -25,6 +26,9 @@ public class DrawHTML extends Draw {
 
     if(GameState.finished(game.board))
       drawnBoard += gameOverMessage(game);
+    else if(displayComputerMoveLink(game)){
+      drawnBoard += "<br /><a class=\"button\" href=\"/ComputerMove\">Computer Moves</a>";
+    }
     return drawnBoard + "<br /><a id=\"home\" class=\"link\" href=\"/\">Home</a></body></html>";
   }
 
@@ -53,8 +57,13 @@ public class DrawHTML extends Draw {
   }
 
   private static String moveType(GameGUI game, int row, int column) {
-    if(Arrays.equals(game.lastMove, new int[]{row, column}))
+    if(Arrays.equals(game.lastMove, new int[]{row, column}) && !GameState.finished(game.board))
       return "last_computer_";
     return "";
+  }
+
+  private static boolean displayComputerMoveLink(GameGUI game) {
+    return (game.player1 instanceof MachinePlayer && game.turn == game.player1.playerValue)
+        || (game.player2 instanceof MachinePlayer && game.turn == game.player2.playerValue);
   }
 }

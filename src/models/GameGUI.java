@@ -17,13 +17,13 @@ public class GameGUI extends Game {
   public synchronized void takeTurn(int[] move) {
     Player player = findPlayerByTurn();
     player.setMove(move);
-    if(valid(lastMove = player.move(board))){
-      board.setCellValue( lastMove, player.playerValue );
-      turn *= -1;
+    if(valid(player.move(board))){
+      if(player instanceof MachinePlayer)
+        lastMove = player.move(board);
+      playTurn(player.move(board), player.playerValue);
       if((player = findPlayerByTurn()) instanceof MachinePlayer){
         lastMove = player.move(board);
-        board.setCellValue(lastMove, player.playerValue);
-        turn *= -1;
+        playTurn(lastMove, player.playerValue);
       }
     }
   }
@@ -69,5 +69,10 @@ public class GameGUI extends Game {
       return player1;
     else
       return player2;
+  }
+
+  private void playTurn(int[] move, int playerValue) {
+    board.setCellValue(move, playerValue);
+    turn *= -1;
   }
 }
