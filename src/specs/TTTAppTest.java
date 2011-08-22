@@ -1,51 +1,41 @@
 package specs;
 
 import Application.TTTApp;
-import models.GameGUI;
-import models.GameState;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertTrue;
 
 public class TTTAppTest {
 
   TTTApp app;
 
   @Before
-  public void setUp() {
+  public void setUp() throws Exception {
     app = new TTTApp();
-    app.game = new GameGUI("/HumanVsHuman");
+    app.serverResponse(new String[] {"GET", "/HumanVsComputer", "HTTP/1.0"});
   }
 
   @Test
-  public void validBoardURIsMatchValidBoardMove() {
+  public void validBoardURIsMatchValidBoardMove() throws Exception {
     assertEquals(app.OK, app.status("/board?row=0&column=0"));
   }
 
   @Test
-  public void validBoardURIsDontMatchInvalidURI() {
+  public void validBoardURIsDontMatchInvalidURI() throws Exception {
     assertEquals(app.NOT_FOUND, app.status("/board?row=0&column=0rgkhr"));
   }
 
   @Test
-  public void validBoardURIsDontMatchInvalidMove() {
+  public void validBoardURIsDontMatchInvalidMove() throws Exception {
     assertEquals(app.NOT_FOUND, app.status("/board?row=0&column=3"));
   }
 
   @Test
-  public void validBoardURIsDontMatchIfGameIsNull() {
-    app.game = null;
-    assertEquals(app.NOT_FOUND, app.status("/board?row=0&column=0"));
-  }
-
-  @Test
   public void computerCannotMoveIfNotItsTurn() throws Exception {
-    app.game = new GameGUI("/HumanVsComputer");
-    assertEquals(1, app.game.turn);
-    app.serverResponse(new String[] {"GET", "/ComputerMove", "HTTP/1.0"});
-    assertTrue(GameState.empty(app.game.board));
+    assertEquals(app.OK, app.status("/ComputerMove"));
+    assertTrue(app.serverResponse(new String[]{"GET", "/ComputerMove", "HTTP/1.0"}).contains("Please select a game type:"));
   }
 
 

@@ -52,6 +52,13 @@ public class GameGUI extends Game {
     player2.setName("Player 2");
   }
 
+  public Player findPlayerByTurn() {
+    if(turn == player1.playerValue)
+      return player1;
+    else
+      return player2;
+  }
+
   private boolean valid(int[] move) {
     return !invalid(move);
   }
@@ -62,13 +69,6 @@ public class GameGUI extends Game {
         return true;
     }
     return false;
-  }
-
-  private Player findPlayerByTurn() {
-    if(turn == player1.playerValue)
-      return player1;
-    else
-      return player2;
   }
 
   private void playTurn(int[] move, int playerValue) {
