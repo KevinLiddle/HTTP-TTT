@@ -48,8 +48,6 @@ public class GameGUI extends Game {
         player2 = new MachinePlayer(PLAYER_2_VALUE);
       }
     }
-    player1.setName("Player 1");
-    player2.setName("Player 2");
   }
 
   public Player findPlayerByTurn() {

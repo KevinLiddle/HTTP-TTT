@@ -14,7 +14,6 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class SocketCommunicationTest {
 
@@ -45,13 +44,6 @@ public class SocketCommunicationTest {
     ps.println("GET / HTTP/1.0");
     waitToSend();
     assertEquals("HTTP/1.0 200 OK", br.readLine());
-  }
-
-  @Test
-  public void serveDrawsABoardForNewGames() throws Exception {
-    ps.println("GET /HumanVsHuman HTTP/1.0");
-    waitToSend();
-    assertTrue(readResponse().contains("board_links"));
   }
 
   @Test

@@ -86,7 +86,11 @@ public class Server implements Runnable {
         connectionServer.serve(clientSocket);
         connectionServer.close(clientSocket);
       } catch (Exception e) {
+        StackTraceElement[] stackTraceElements = e.getStackTrace();
         System.out.println(e);
+        for(StackTraceElement ste : stackTraceElements){
+          System.out.println(ste.getFileName() + " : " + ste.getLineNumber());
+        }
       }
 
     }

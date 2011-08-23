@@ -4,6 +4,10 @@ public class MachinePlayer extends Player {
 
   public MachinePlayer(int _playerValue) {
     super(_playerValue);
+    int modelNumber = _playerValue;
+    if(modelNumber < 0)
+      modelNumber += 3;
+    setName("TicTacTobot " + modelNumber * 1000);
   }
 
   public int[] move(Board board) {

@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class MachinePlayerTest {
@@ -52,5 +53,11 @@ public class MachinePlayerTest {
 
     assertArrayEquals(new int[] {2,0}, player.move(board));
   }
+
+  @Test
+  public void machineNameIsTicTacTobotX000() {
+    assertEquals("TicTacTobot 2000", player.name);
+  }
+
 
 }

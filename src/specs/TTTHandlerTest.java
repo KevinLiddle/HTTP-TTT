@@ -1,100 +1,80 @@
 package specs;
 
-import Handlers.Handler;
+import Handlers.TTTHandler;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.StringReader;
-import java.lang.reflect.Method;
 
 import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertTrue;
 
 public class TTTHandlerTest {
 
-  MockHandler handler;
+  TTTHandler handler;
 
   @Before
   public void setUp() {
-    handler = new MockHandler();
+    handler = new TTTHandler();
   }
 
   @Test
   public void executeCallsHomeForAHomeRequest() throws Exception {
-    assertEquals("home", handler.execute("/").readLine());
+    assertTrue(readDocument(handler.execute("/")).contains("Human vs. Human"));
   }
 
   @Test
   public void executeCallsNewGameForValidNewGameRequest() throws Exception {
-    assertEquals("newGame", handler.execute("/HumanVsComputer").readLine());
+    handler.execute("/HumanVsComputer");
+    assertTrue(readDocument(handler.execute("/setName?player1Name=Kevin")).contains("table"));
   }
 
   @Test
   public void executeCallsNewGameForAnotherValidGameRequest() throws Exception {
-    assertEquals("newGame", handler.execute("/ComputerVsComputer").readLine());
+    assertTrue(readDocument(handler.execute("/ComputerVsComputer")).contains("table"));
   }
-
 
   @Test
   public void executeCallsHumanMoveForValidBoardRequest() throws Exception {
-    assertEquals("humanMove", handler.execute("/board?row=0&column=0").readLine());
+    handler.execute("/HumanVsHuman");
+    assertTrue(readDocument(handler.execute("/board?row=0&column=0")).contains("table"));
   }
 
   @Test
   public void executeCallsNotFoundForInvalidMoveRequest() throws Exception {
-    assertEquals("notFound", handler.execute("/board?row=3&column=0").readLine());
+    assertTrue(readDocument(handler.execute("/board?row=3&column=0")).contains("Not Found"));
   }
-
-  @Test
-  public void executeCallsComputerMoveForValidRequest() throws Exception {
-    assertEquals("computerMove", handler.execute("/ComputerMove").readLine());
-  }
-
 
   @Test
   public void executeCallsNotFoundForRoutesNotFound() throws Exception {
-    assertEquals("notFound", handler.execute("/KarateKid").readLine());
+    assertTrue(readDocument(handler.execute("/KarateKid")).contains("Not Found"));
+  }
+
+  @Test
+  public void setPlayerNamesParsesFormRequestAndSetsPlayerNames() throws Exception {
+    handler.execute("/HumanVsComputer");
+    handler.execute("/setName?player1Name=Kevin");
+    assertEquals("Kevin", handler.game.player1.name);
+    assertEquals("TicTacTobot 2000", handler.game.player2.name);
+  }
+
+  @Test
+  public void gameBeginsAfterNamesSet() throws Exception {
+    handler.execute("/HumanVsHuman");
+    handler.execute("/setName?player1Name=Kevin&player2Name=Paul");
+    assertEquals("Kevin", handler.game.player1.name);
+    assertEquals("Paul", handler.game.player2.name);
   }
 
 
-  public class MockHandler extends Handler {
-
-    public BufferedReader execute(String request) throws Exception {
-      BufferedReader br = new BufferedReader(new FileReader(new File("src/config/routes.txt")));
-      String line = br.readLine();
-      while(line != null){
-        String[] route = line.split("\\s*->\\s*");
-        if(request.matches(route[0])){
-          Method method = this.getClass().getMethod(route[1], String.class);
-          return new BufferedReader(new StringReader((String) method.invoke(this, request)));
-        }
-        line = br.readLine();
-      }
-      return new BufferedReader(new StringReader(mockNotFound(request)));
+  private String readDocument(BufferedReader br) throws Exception {
+    String line = br.readLine();
+    String document = "";
+    while(line != null){
+      document += line + "\n";
+      line = br.readLine();
     }
-
-    public String home(String request) {
-      return "home";
-    }
-
-    public String newGame(String request) {
-      return "newGame";
-    }
-
-    public String humanMove(String request) throws Exception {
-      return "humanMove";
-    }
-
-    public String computerMove(String request) {
-      return "computerMove";
-    }
-
-    public String mockNotFound(String request) {
-      return "notFound";
-    }
-
+    return document;
   }
 
 }

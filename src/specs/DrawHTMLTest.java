@@ -14,6 +14,7 @@ public class DrawHTMLTest {
   String htmlFooter = "<br /><a id=\"home\" class=\"link\" href=\"/\">Home</a></body></html>";
   String winningBoard = "<html><head>" +
       "<title>Tic Tac Toe</title>" +
+      "<link rel=\"icon\" href=\"favicon.ico\" type=\"image/icon\" />" +
       "<link rel=\"stylesheet\" href=\"game.css\" type=\"text/css\" />" +
       "<script src=\"jquery.js\" type=\"text/javascript\"></script>" +
       "<script src=\"machinePlayer.js\" type=\"text/javascript\"></script>" +
@@ -38,12 +39,15 @@ public class DrawHTMLTest {
   @Before
   public void setUp() {
     game = new GameGUI("/HumanVsHuman");
+    game.player1.setName("Player 1");
+    game.player2.setName("Player 2");
   }
 
   @Test
   public void drawBlankHTMLBoard() {
     String blankHTMLBoard = "<html><head>" +
       "<title>Tic Tac Toe</title>" +
+      "<link rel=\"icon\" href=\"favicon.ico\" type=\"image/icon\" />" +
       "<link rel=\"stylesheet\" href=\"game.css\" type=\"text/css\" />" +
       "<script src=\"jquery.js\" type=\"text/javascript\"></script>" +
       "<script src=\"machinePlayer.js\" type=\"text/javascript\"></script>" +

@@ -11,6 +11,7 @@ public class DrawHTML extends Draw {
   public static String draw(GameGUI game) {
     String drawnBoard = "<html><head>" +
       "<title>Tic Tac Toe</title>" +
+      "<link rel=\"icon\" href=\"favicon.ico\" type=\"image/icon\" />" +
       "<link rel=\"stylesheet\" href=\"game.css\" type=\"text/css\" />" +
       "<script src=\"jquery.js\" type=\"text/javascript\"></script>" +
       "<script src=\"machinePlayer.js\" type=\"text/javascript\"></script>" +

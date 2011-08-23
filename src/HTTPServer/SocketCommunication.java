@@ -2,7 +2,10 @@ package HTTPServer;
 
 import Application.Application;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.Socket;
 
 public class SocketCommunication implements ConnectionServer {
@@ -38,10 +41,12 @@ public class SocketCommunication implements ConnectionServer {
   }
 
   private synchronized String[] request(InputStream inputStream) throws Exception {
-    InputStreamReader isr = new InputStreamReader(inputStream);
-    BufferedReader br = new BufferedReader(isr);
+    BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
     String line = br.readLine();
-    return line.split(" ");
+    String[] requestElements = new String[] {"", "", ""};
+    if(line != null)
+       requestElements = line.split(" ");
+    return requestElements;
   }
 
 
