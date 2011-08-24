@@ -11,3 +11,4 @@
 /setName\?player1Name=\w+&player2Name=\w+ -> setPlayerNames
 /setName\?player1Name=\w+                 -> setPlayerNames
 /setName\?player2Name=\w+                 -> setPlayerNames
+/rematch                                  -> rematch

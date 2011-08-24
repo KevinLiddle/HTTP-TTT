@@ -42,3 +42,8 @@ p {
     position: relative;
     bottom: -10em;
 }
+
+h2 {
+    padding-top: 2em;
+    color: #32A5F5;
+}

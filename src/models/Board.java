@@ -42,4 +42,8 @@ public class Board {
     }
     return openSpaces;
   }
+
+  public boolean empty() {
+    return (openSpaces() == dimension*dimension);
+  }
 }

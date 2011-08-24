@@ -18,7 +18,7 @@ public class DrawHTMLTest {
       "<link rel=\"stylesheet\" href=\"game.css\" type=\"text/css\" />" +
       "<script src=\"jquery.js\" type=\"text/javascript\"></script>" +
       "<script src=\"machinePlayer.js\" type=\"text/javascript\"></script>" +
-      "</head><body><table border=\"2\" bordercolor=\"#32A5F5\">\n" +
+      "</head><body><h2>Player 1(X) vs. Player 2(O)</h2><table border=\"2\" bordercolor=\"#32A5F5\">\n" +
       "<tr>\n" +
       "<td><p class=\"marker\">X</p></td>\n" +
       "<td><p class=\"board_links\">-</p></td>\n" +
@@ -34,7 +34,7 @@ public class DrawHTMLTest {
       "<td><p class=\"board_links\">-</p></td>\n" +
       "<td><p class=\"marker\">X</p></td>\n" +
       "</tr>\n" +
-      "</table><br /><p>Player 1 Wins!</p><br /><a class=\"link\" href=\"/HumanVsHuman\">Rematch</a>" + htmlFooter;
+      "</table><br /><p>Player 1 Wins!</p><br /><a class=\"link\" href=\"/rematch\">Rematch</a>" + htmlFooter;
 
   @Before
   public void setUp() {
@@ -51,7 +51,7 @@ public class DrawHTMLTest {
       "<link rel=\"stylesheet\" href=\"game.css\" type=\"text/css\" />" +
       "<script src=\"jquery.js\" type=\"text/javascript\"></script>" +
       "<script src=\"machinePlayer.js\" type=\"text/javascript\"></script>" +
-      "</head><body><table border=\"2\" bordercolor=\"#32A5F5\">\n" +
+      "</head><body><h2>Player 1(X) vs. Player 2(O)</h2><table border=\"2\" bordercolor=\"#32A5F5\">\n" +
       "<tr>\n" +
       "<td><a class=\"board_links\" href=\"/board?row=0&column=0\">----</a></td>\n" +
       "<td><a class=\"board_links\" href=\"/board?row=0&column=1\">----</a></td>\n" +

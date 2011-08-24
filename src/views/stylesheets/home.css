@@ -21,4 +21,8 @@ li a {
     font-size: 1.5em;}
 a {
     text-decoration: none;}
-h2 {color: #FFFFFF}
+h2 {color: #FFFFFF;}
+
+form {
+    color: #FFFFFF;
+}

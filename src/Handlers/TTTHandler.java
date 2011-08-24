@@ -56,6 +56,11 @@ public class TTTHandler extends Handler {
     return newGameWithHuman(names);
   }
 
+  public synchronized BufferedReader rematch(String request) throws Exception {
+    game.board.clear();
+    return new BufferedReader(new StringReader(DrawHTML.draw(game)));
+  }
+
   private synchronized BufferedReader newGameWithHuman(String[] names) {
     Player[] players = {game.player1, game.player2};
     for(int i = 0; i < players.length; i++){

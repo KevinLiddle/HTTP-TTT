@@ -43,5 +43,4 @@ public class GameGUITest {
     assertEquals(-1, game.board.cellValueAt(new int[] {1,1}));
   }
 
-
 }

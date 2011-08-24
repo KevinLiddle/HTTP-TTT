@@ -49,5 +49,12 @@ public class BoardTest {
     assertEquals(5, board.openSpaces());
   }
 
+  @Test
+  public void emptyReturnsTrueIfBoardIsEmpty() {
+    assertTrue(board.empty());
+    board.setCellValue(new int[] {0,0}, 1);
+    assertFalse(board.empty());
+  }
+
 
 }

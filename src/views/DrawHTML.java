@@ -15,7 +15,9 @@ public class DrawHTML extends Draw {
       "<link rel=\"stylesheet\" href=\"game.css\" type=\"text/css\" />" +
       "<script src=\"jquery.js\" type=\"text/javascript\"></script>" +
       "<script src=\"machinePlayer.js\" type=\"text/javascript\"></script>" +
-      "</head><body><table border=\"2\" bordercolor=\"#32A5F5\">\n";
+      "</head><body>" +
+      "<h2>" + game.player1.name + "(X) vs. " + game.player2.name + "(O)</h2>" +
+      "<table border=\"2\" bordercolor=\"#32A5F5\">\n";
     for (int i = 0; i < game.board.dimension; i++) {
       drawnBoard += "<tr>\n";
       for (int j = 0; j < game.board.dimension; j++) {
@@ -42,7 +44,7 @@ public class DrawHTML extends Draw {
     else
       message += "<p>" + "Cat's Game...</p>";
     message += "<br />" +
-               "<a class=\"link\" href=\"" + game.gameType + "\">Rematch</a>";
+               "<a class=\"link\" href=\"/rematch\">Rematch</a>";
     return message;
   }
 

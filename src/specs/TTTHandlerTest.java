@@ -1,12 +1,14 @@
 package specs;
 
 import Handlers.TTTHandler;
+import models.GameGUI;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.BufferedReader;
 
 import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
 
 public class TTTHandlerTest {
@@ -64,6 +66,17 @@ public class TTTHandlerTest {
     handler.execute("/setName?player1Name=Kevin&player2Name=Paul");
     assertEquals("Kevin", handler.game.player1.name);
     assertEquals("Paul", handler.game.player2.name);
+  }
+
+  @Test
+  public void rematchClearsCurrentGameBoard() throws Exception {
+    handler.game = new GameGUI("/HumanVsHuman");
+    handler.game.player1.setName("Kevin");
+    handler.game.player2.setName("Nivek");
+    handler.game.takeTurn(new int[]{0, 0});
+    assertFalse(handler.game.board.empty());
+    handler.execute("/rematch");
+    assertTrue(handler.game.board.empty()); 
   }
 
 

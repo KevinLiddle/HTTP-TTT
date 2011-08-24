@@ -25,5 +25,4 @@ public class HumanPlayerGUITest {
     assertEquals(expectedMove, player.move(board));
   }
 
-
 }
