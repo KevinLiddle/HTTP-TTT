@@ -1,4 +1,4 @@
-package specs;
+package specs.Handlers;
 
 import Handlers.TTTHandler;
 import models.GameGUI;
@@ -7,9 +7,7 @@ import org.junit.Test;
 
 import java.io.BufferedReader;
 
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.assertFalse;
-import static junit.framework.Assert.assertTrue;
+import static junit.framework.Assert.*;
 
 public class TTTHandlerTest {
 

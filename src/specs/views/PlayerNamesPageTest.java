@@ -1,4 +1,4 @@
-package specs;
+package specs.views;
 
 import models.GameGUI;
 import org.junit.Test;

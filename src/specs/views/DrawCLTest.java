@@ -1,4 +1,4 @@
-package specs;
+package specs.views;
 
 import models.GameCL;
 import org.junit.Before;

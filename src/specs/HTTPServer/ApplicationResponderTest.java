@@ -1,19 +1,20 @@
-package specs;
+package specs.HTTPServer;
 
-import Application.TTTApp;
+import HTTPServer.ApplicationResponder;
+import Handlers.TTTHandler;
 import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
 
-public class TTTAppTest {
+public class ApplicationResponderTest {
 
-  TTTApp app;
+  ApplicationResponder app;
 
   @Before
   public void setUp() throws Exception {
-    app = new TTTApp();
+    app = new ApplicationResponder(new TTTHandler());
     app.serverResponse(new String[] {"GET", "/HumanVsComputer", "HTTP/1.0"});
   }
 

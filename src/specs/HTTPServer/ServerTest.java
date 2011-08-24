@@ -1,4 +1,4 @@
-package specs;
+package specs.HTTPServer;
 
 import HTTPServer.ConnectionServer;
 import HTTPServer.Server;
@@ -88,9 +88,6 @@ public class ServerTest {
     }
   }
 
-
-
-  
 
   private void connectClient(Socket clientSocket) throws Exception {
     InetSocketAddress serverAddress = new InetSocketAddress(serverPort);

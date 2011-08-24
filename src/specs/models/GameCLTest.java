@@ -1,4 +1,4 @@
-package specs;
+package specs.models;
 
 import models.GameCL;
 import models.HumanPlayerCL;

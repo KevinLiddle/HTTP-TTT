@@ -1,15 +1,19 @@
-package Application;
+package HTTPServer;
 
-import Handlers.TTTHandler;
+import Handlers.Handler;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
-public class TTTApp extends Application {
+public class ApplicationResponder {
 
-  public TTTApp() {
-    handler = new TTTHandler();
+  public final String OK = "200 OK";
+  public final String NOT_FOUND = "404 Not Found";
+  public Handler handler;
+
+  public ApplicationResponder(Handler _handler) {
+    handler = _handler;
   }
 
   public synchronized String serverResponse(String[] request) throws Exception {

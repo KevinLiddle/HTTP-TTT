@@ -1,4 +1,4 @@
-package specs;
+package specs.models;
 
 import models.Board;
 import models.MachinePlayer;

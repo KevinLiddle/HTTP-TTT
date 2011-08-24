@@ -73,4 +73,9 @@ public class GameGUI extends Game {
     board.setCellValue(move, playerValue);
     turn *= -1;
   }
+
+  public void reset() {
+    board.clear();
+    turn = 1;
+  }
 }

@@ -1,6 +1,6 @@
 package HTTPServer;
 
-import Application.TTTApp;
+import Handlers.TTTHandler;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -15,7 +15,7 @@ public class Server implements Runnable {
   private boolean running = false;
 
   public static void main(String args[]) throws Exception {
-    SocketCommunication client = new SocketCommunication(new TTTApp());
+    SocketCommunication client = new SocketCommunication(new ApplicationResponder(new TTTHandler()));
     Server server = new Server(3000, client);
     server.start();
   }

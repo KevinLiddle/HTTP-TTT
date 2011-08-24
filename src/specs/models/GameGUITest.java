@@ -1,4 +1,4 @@
-package specs;
+package specs.models;
 
 import models.GameGUI;
 import models.GameState;
@@ -42,5 +42,16 @@ public class GameGUITest {
     assertEquals(1, game.board.cellValueAt(new int[] {0,0}));
     assertEquals(-1, game.board.cellValueAt(new int[] {1,1}));
   }
+
+  @Test
+  public void resetRevertsGameToOriginalState() {
+    game.takeTurn(game.player1.move(game.board));
+    assertEquals(1, game.board.cellValueAt(new int[] {0,0}));
+    assertEquals(-1, game.turn);
+    game.reset();
+    assertTrue(game.board.empty());
+    assertEquals(1, game.turn);
+  }
+
 
 }

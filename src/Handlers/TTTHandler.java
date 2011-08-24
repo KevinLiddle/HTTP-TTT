@@ -57,7 +57,8 @@ public class TTTHandler extends Handler {
   }
 
   public synchronized BufferedReader rematch(String request) throws Exception {
-    game.board.clear();
+    game.reset();
+    game.takeTurn(null);
     return new BufferedReader(new StringReader(DrawHTML.draw(game)));
   }
 

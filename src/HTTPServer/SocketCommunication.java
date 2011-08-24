@@ -1,7 +1,5 @@
 package HTTPServer;
 
-import Application.Application;
-
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStream;
@@ -11,9 +9,9 @@ import java.net.Socket;
 public class SocketCommunication implements ConnectionServer {
 
   DataOutputStream os;
-  private Application app;
+  private ApplicationResponder app;
 
-  public SocketCommunication(Application _app) {
+  public SocketCommunication(ApplicationResponder _app) {
     app = _app;
   }
 
