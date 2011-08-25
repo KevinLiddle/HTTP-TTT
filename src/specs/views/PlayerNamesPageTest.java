@@ -23,7 +23,7 @@ public class PlayerNamesPageTest {
       "<form name=\"playerName\" action=\"setName\" method=\"get\" onsubmit=\"return validateForm()\">\n" +
       "Player 1: <input type=\"text\" name=\"player1Name\" />\n" +
       "<input type=\"submit\" value=\"Submit\" />\n" +
-      "</form>", PlayerNamesPage.draw(game));
+      "</form></body></html>", PlayerNamesPage.draw(game));
   }
 
   @Test
@@ -40,7 +40,7 @@ public class PlayerNamesPageTest {
       "Player 1: <input type=\"text\" name=\"player1Name\" />\n" +
       "Player 2: <input type=\"text\" name=\"player2Name\" />\n" +
       "<input type=\"submit\" value=\"Submit\" />\n" +
-      "</form>", PlayerNamesPage.draw(game));
+      "</form></body></html>", PlayerNamesPage.draw(game));
   }
 
 

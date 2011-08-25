@@ -1,11 +1,14 @@
 package models;
 
+import java.util.Date;
+
 public class GameGUI extends Game {
 
   public String gameType;
   public String[] validGameTypes = {"/HumanVsHuman", "/HumanVsComputer", "/ComputerVsHuman", "/ComputerVsComputer"};
   public int turn;
   public int[] lastMove;
+  public Date savedAt;
 
   public GameGUI(String _gameType) {
     board = new Board();

@@ -15,7 +15,8 @@ public class DatabaseTest {
 
   @Before
   public void setUp(){
-    obj = Database.table().add(new GameGUI("/HumanVsHuman"));
+    obj = new GameGUI("/HumanVsHuman");
+    Database.table().add(obj);
   }
 
   @After

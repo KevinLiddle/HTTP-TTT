@@ -24,7 +24,7 @@ public class PlayerNamesPage {
       playerNumber++;
     }
     output += "<input type=\"submit\" value=\"Submit\" />\n" +
-              "</form>";
+              "</form></body></html>";
     return output;
   }
 }

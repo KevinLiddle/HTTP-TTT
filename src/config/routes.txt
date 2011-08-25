@@ -12,3 +12,6 @@
 /setName\?player1Name=\w+                 -> setPlayerNames
 /setName\?player2Name=\w+                 -> setPlayerNames
 /rematch                                  -> rematch
+/saveGame                                 -> saveGame
+/loadGames                                -> loadGamesPage
+/loadGame\?id=\d+                         -> loadGame

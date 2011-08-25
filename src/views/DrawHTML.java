@@ -32,7 +32,10 @@ public class DrawHTML extends Draw {
     else if(displayComputerMoveLink(game)){
       drawnBoard += "<br /><a class=\"button\" href=\"/ComputerMove\">Computer Moves</a>";
     }
-    return drawnBoard + "<br /><a id=\"home\" class=\"link\" href=\"/\">Home</a></body></html>";
+    drawnBoard += "<br /><a id=\"home\" class=\"link\" href=\"/\">Home</a>";
+    if(!GameState.finished(game.board) && !game.board.empty())
+      drawnBoard += "<br /><a class=\"link\" href=\"/saveGame\">Save Game</a>";
+    return drawnBoard + "</body></html>";
   }
 
   public static String gameOverMessage(GameGUI game) {

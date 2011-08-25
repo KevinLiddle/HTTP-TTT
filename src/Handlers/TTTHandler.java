@@ -1,15 +1,18 @@
 package Handlers;
 
+import HTTPServer.Database;
 import models.GameGUI;
 import models.MachinePlayer;
 import models.Player;
 import views.DrawHTML;
+import views.LoadGamesPage;
 import views.PlayerNamesPage;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.io.StringReader;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -62,6 +65,22 @@ public class TTTHandler extends Handler {
     return new BufferedReader(new StringReader(DrawHTML.draw(game)));
   }
 
+  public synchronized BufferedReader saveGame(String request) throws Exception {
+    game.savedAt = new Date();
+    Database.table().add(game);
+    return home(request);
+  }
+
+  public synchronized BufferedReader loadGamesPage(String request) throws Exception {
+    return new BufferedReader(new StringReader(LoadGamesPage.draw(game)));
+  }
+
+  public synchronized BufferedReader loadGame(String request) throws Exception {
+    game = (GameGUI) Database.table().get(parseLoadGameRequest(request));
+    Database.table().remove(game);
+    return newGameWithHuman(new String[] {game.player1.name, game.player2.name});
+  }
+
   private synchronized BufferedReader newGameWithHuman(String[] names) {
     Player[] players = {game.player1, game.player2};
     for(int i = 0; i < players.length; i++){
@@ -100,6 +119,11 @@ public class TTTHandler extends Handler {
       }
     }
     return names;
+  }
+
+  private synchronized int parseLoadGameRequest(String request) {
+    String id = request.substring(request.indexOf("=") + 1);
+    return Integer.parseInt(id);
   }
 
 }

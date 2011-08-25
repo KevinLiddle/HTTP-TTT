@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import views.DrawHTML;
 
+import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
 
 public class DrawHTMLTest {
@@ -82,6 +83,16 @@ public class DrawHTMLTest {
     game = new GameGUI("/ComputerVsComputer");
     assertTrue(DrawHTML.draw(game).contains("<a class=\"button\" href=\"/ComputerMove\">Computer Moves</a>"));
   }
+
+  @Test
+  public void saveGameLinkAppearsMidGame() {
+    game = new GameGUI("/HumanVsComputer");
+    assertFalse(DrawHTML.draw(game).contains("Save Game"));
+    game.takeTurn(new int[] {0,0});
+    game.takeTurn(null);
+    assertTrue(DrawHTML.draw(game).contains("Save Game"));
+  }
+
 
   private void setXWinner() {
     game.board.setCellValue(new int[] {0,0}, 1);

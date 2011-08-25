@@ -13,7 +13,8 @@ h1 {
 h2 {
     font-size: 2em;}
 ul {
-    list-style: none;}
+    list-style: none;
+    float: left;}
 li {
     margin: 2em;}
 li a {
@@ -25,4 +26,21 @@ h2 {color: #FFFFFF;}
 
 form {
     color: #FFFFFF;
+}
+
+#loadGames {
+    color: #32A5F5;
+    text-decoration: none;
+    float: right;
+    margin-top: 10%;
+    font-size: 1.5em;
+    margin-right: 5%;
+}
+
+#home {
+    color: #32A5F5;
+    text-decoration: none;
+    font-size: 1.5em;
+    position: relative;
+    bottom: -10em;
 }

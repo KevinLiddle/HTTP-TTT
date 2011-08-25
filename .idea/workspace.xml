@@ -2,27 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="474c3353-c0ae-4abf-a8c6-54aa63670955" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Application/Application.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Application/TTTApp.java" afterPath="$PROJECT_DIR$/src/HTTPServer/ApplicationResponder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/specs/BoardTest.java" afterPath="$PROJECT_DIR$/src/specs/models/BoardTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/specs/DrawCLTest.java" afterPath="$PROJECT_DIR$/src/specs/views/DrawCLTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/specs/DrawHTMLTest.java" afterPath="$PROJECT_DIR$/src/specs/views/DrawHTMLTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/specs/GameCLTest.java" afterPath="$PROJECT_DIR$/src/specs/models/GameCLTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/specs/GameGUITest.java" afterPath="$PROJECT_DIR$/src/specs/models/GameGUITest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/specs/GameStateTest.java" afterPath="$PROJECT_DIR$/src/specs/models/GameStateTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/specs/HumanPlayerCLTest.java" afterPath="$PROJECT_DIR$/src/specs/models/HumanPlayerCLTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/specs/HumanPlayerGUITest.java" afterPath="$PROJECT_DIR$/src/specs/models/HumanPlayerGUITest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/specs/MachinePlayerTest.java" afterPath="$PROJECT_DIR$/src/specs/models/MachinePlayerTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/specs/PlayerNamesPageTest.java" afterPath="$PROJECT_DIR$/src/specs/views/PlayerNamesPageTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/specs/ServerTest.java" afterPath="$PROJECT_DIR$/src/specs/HTTPServer/ServerTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/specs/SocketCommunicationTest.java" afterPath="$PROJECT_DIR$/src/specs/HTTPServer/SocketCommunicationTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/specs/TTTAppTest.java" afterPath="$PROJECT_DIR$/src/specs/HTTPServer/ApplicationResponderTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/specs/TTTHandlerTest.java" afterPath="$PROJECT_DIR$/src/specs/Handlers/TTTHandlerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/images/favicon.ico" afterPath="$PROJECT_DIR$/src/views/images/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTPServer/Server.java" afterPath="$PROJECT_DIR$/src/HTTPServer/Server.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTPServer/SocketCommunication.java" afterPath="$PROJECT_DIR$/src/HTTPServer/SocketCommunication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Handlers/TTTHandler.java" afterPath="$PROJECT_DIR$/src/Handlers/TTTHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/routes.txt" afterPath="$PROJECT_DIR$/src/config/routes.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/GameGUI.java" afterPath="$PROJECT_DIR$/src/models/GameGUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/specs/HTTPServer/DatabaseTest.java" afterPath="$PROJECT_DIR$/src/specs/HTTPServer/DatabaseTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/specs/Handlers/TTTHandlerTest.java" afterPath="$PROJECT_DIR$/src/specs/Handlers/TTTHandlerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/specs/views/DrawHTMLTest.java" afterPath="$PROJECT_DIR$/src/specs/views/DrawHTMLTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/specs/views/PlayerNamesPageTest.java" afterPath="$PROJECT_DIR$/src/specs/views/PlayerNamesPageTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/DrawHTML.java" afterPath="$PROJECT_DIR$/src/views/DrawHTML.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/PlayerNamesPage.java" afterPath="$PROJECT_DIR$/src/views/PlayerNamesPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/home.html" afterPath="$PROJECT_DIR$/src/views/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/stylesheets/home.css" afterPath="$PROJECT_DIR$/src/views/stylesheets/home.css" />
     </list>
     <ignored path="HTTP_TTT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,46 +76,19 @@
       <file leaf-file-name="routes.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config/routes.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0">
+            <state line="16" column="21" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TTTHandler.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TTTHandler.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Handlers/TTTHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="81" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/specs/HTTPServer/DatabaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="36" selection-start="568" selection-end="568" vertical-scroll-proportion="0.421436">
+            <state line="72" column="0" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.33506763">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Database.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HTTPServer/Database.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="26" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Server.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HTTPServer/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="1325" selection-end="1325" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -142,22 +107,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/config/routes.txt" />
-        <option value="$PROJECT_DIR$/src/specs/TTTAppTest.java" />
-        <option value="$PROJECT_DIR$/src/specs/SocketCommunicationTest.java" />
-        <option value="$PROJECT_DIR$/src/specs/GameGUITest.java" />
-        <option value="$PROJECT_DIR$/src/models/GameGUI.java" />
-        <option value="$PROJECT_DIR$/src/Application/ApplicationResponder.java" />
-        <option value="$PROJECT_DIR$/src/Application/TTTApp.java" />
-        <option value="$PROJECT_DIR$/src/HTTPServer/SocketCommunication.java" />
-        <option value="$PROJECT_DIR$/src/specs/ApplicationResponderTest.java" />
-        <option value="$PROJECT_DIR$/src/HTTPServer/ApplicationResponder.java" />
-        <option value="$PROJECT_DIR$/src/HTTPServer/Server.java" />
-        <option value="$PROJECT_DIR$/src/Handlers/TTTHandler.java" />
-        <option value="$PROJECT_DIR$/src/specs/Handlers/TTTHandlerTest.java" />
-        <option value="$PROJECT_DIR$/src/specs/HTTPServer/ServerTest.java" />
-        <option value="$PROJECT_DIR$/src/HTTPServer/Database.java" />
+        <option value="$PROJECT_DIR$/src/views/PlayerNamesPage.java" />
+        <option value="$PROJECT_DIR$/src/specs/views/PlayerNamesPageTest.java" />
+        <option value="$PROJECT_DIR$/src/specs/HTTPServer/TestDatabase.java" />
         <option value="$PROJECT_DIR$/src/specs/HTTPServer/DatabaseTest.java" />
+        <option value="$PROJECT_DIR$/src/config/routes.txt" />
+        <option value="$PROJECT_DIR$/src/views/html/LoadGamesPage.java" />
+        <option value="$PROJECT_DIR$/src/specs/models/BoardTest.java" />
+        <option value="$PROJECT_DIR$/src/views/DrawHTML.java" />
+        <option value="$PROJECT_DIR$/src/specs/views/DrawHTMLTest.java" />
+        <option value="$PROJECT_DIR$/src/views/home.html" />
+        <option value="$PROJECT_DIR$/src/models/GameGUI.java" />
+        <option value="$PROJECT_DIR$/src/Handlers/TTTHandler.java" />
+        <option value="$PROJECT_DIR$/src/views/LoadGamesPage.java" />
+        <option value="$PROJECT_DIR$/src/specs/views/LoadGamesPageTest.java" />
+        <option value="$PROJECT_DIR$/src/specs/Handlers/TTTHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/views/stylesheets/home.css" />
       </list>
     </option>
   </component>
@@ -222,6 +187,76 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="specs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP_TTT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="specs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -259,7 +294,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HTTPServer" />
+              <option name="myItemId" value="Handlers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,10 +329,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HTTPServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -314,24 +345,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Handlers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HTTP_TTT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HTTP_TTT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -360,8 +373,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="HTTPServer" />
       <recent name="views" />
+      <recent name="HTTPServer" />
       <recent name="javaTTT" />
       <recent name="httpTTT" />
     </key>
@@ -369,7 +382,7 @@
       <recent name="views" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All Tests">
+  <component name="RunManager" selected="Application.Server">
     <configuration default="false" name="ServerTest.givenAConnectedServer_canSendString" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="HTTP_TTT" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -587,7 +600,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="HTTP_TTT" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="62371" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -792,116 +811,118 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/views/javascripts/formValidation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="80" selection-start="210" selection-end="210" vertical-scroll-proportion="0.04682622">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Handlers/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="963" selection-end="963" vertical-scroll-proportion="0.43704474">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/PlayerNamesPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.43704474">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/specs/HTTPServer/SocketCommunicationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="64" selection-start="667" selection-end="667" vertical-scroll-proportion="0.33070865">
+        <state line="23" column="17" selection-start="553" selection-end="553" vertical-scroll-proportion="0.14047867">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/GameGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/specs/models/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="13" selection-start="2154" selection-end="2154" vertical-scroll-proportion="0.0">
+        <state line="57" column="0" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.8272633">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="30" selection-end="30" vertical-scroll-proportion="0.031217482">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/GameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="65" selection-end="65" vertical-scroll-proportion="0.062434964">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specs/views/DrawHTMLTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="24" selection-start="3760" selection-end="3760" vertical-scroll-proportion="0.70343393">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="8" selection-start="448" selection-end="448" vertical-scroll-proportion="-7.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/DrawHTML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="54" selection-start="876" selection-end="876" vertical-scroll-proportion="0.09469303">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/specs/models/GameGUITest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="13" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.0">
+        <state line="10" column="13" selection-start="234" selection-end="234" vertical-scroll-proportion="0.062434964">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/HTTPServer/ApplicationResponderTest.java">
+    <entry file="file://$PROJECT_DIR$/src/models/GameGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="37" selection-start="393" selection-end="393" vertical-scroll-proportion="0.15608741">
+        <state line="10" column="22" selection-start="287" selection-end="287" vertical-scroll-proportion="0.15608741">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTTPServer/ApplicationResponder.java">
+    <entry file="file://$PROJECT_DIR$/src/models/HumanPlayerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="161" selection-end="161" vertical-scroll-proportion="0.062434964">
+        <state line="2" column="13" selection-start="30" selection-end="30" vertical-scroll-proportion="0.031217482">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/routes.txt">
+    <entry file="file://$PROJECT_DIR$/src/specs/views/LoadGamesPageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/HTTPServer/ServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/Handlers/TTTHandlerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTTPServer/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1325" selection-end="1325" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTTPServer/SocketCommunication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="42" selection-start="768" selection-end="768" vertical-scroll-proportion="0.35900104">
+        <state line="43" column="72" selection-start="1048" selection-end="1048" vertical-scroll-proportion="1.015748">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/LoadGamesPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="114" selection-start="607" selection-end="607" vertical-scroll-proportion="0.24973986">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/stylesheets/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="20" selection-start="482" selection-end="482" vertical-scroll-proportion="0.37460977">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/stylesheets/game.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="0.6867846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specs/Handlers/TTTHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="22" selection-start="3849" selection-end="3849" vertical-scroll-proportion="0.54734653">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Handlers/TTTHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="81" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTTPServer/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="26" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/HTTPServer/DatabaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="36" selection-start="568" selection-end="568" vertical-scroll-proportion="0.421436">
+        <state line="72" column="0" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.33506763">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
