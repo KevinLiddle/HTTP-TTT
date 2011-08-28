@@ -72,7 +72,7 @@ public class TTTHandler extends Handler {
   }
 
   public synchronized BufferedReader loadGamesPage(String request) throws Exception {
-    return new BufferedReader(new StringReader(LoadGamesPage.draw(game)));
+    return new BufferedReader(new StringReader(LoadGamesPage.draw()));
   }
 
   public synchronized BufferedReader loadGame(String request) throws Exception {

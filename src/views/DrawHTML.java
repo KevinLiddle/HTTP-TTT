@@ -17,6 +17,7 @@ public class DrawHTML extends Draw {
       "<script src=\"machinePlayer.js\" type=\"text/javascript\"></script>" +
       "</head><body>" +
       "<h2>" + game.player1.name + "(X) vs. " + game.player2.name + "(O)</h2>" +
+      "<p class=\"turn\">" + game.findPlayerByTurn().name + "'s turn</p>" +
       "<table border=\"2\" bordercolor=\"#32A5F5\">\n";
     for (int i = 0; i < game.board.dimension; i++) {
       drawnBoard += "<tr>\n";
@@ -65,6 +66,12 @@ public class DrawHTML extends Draw {
   private static String moveType(GameGUI game, int row, int column) {
     if(Arrays.equals(game.lastMove, new int[]{row, column}) && !GameState.finished(game.board))
       return "last_computer_";
+    return "";
+  }
+
+  private static String computerTurn(GameGUI game) {
+    if(game.lastMove != null)
+      return "computer_turn";
     return "";
   }
 

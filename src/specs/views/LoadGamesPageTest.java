@@ -43,7 +43,7 @@ public class LoadGamesPageTest {
       "<ul>\n" +
       "<li><a href=\"/loadGame?id=0\">Kevin vs. Nivek - " + game.savedAt + "</a></li>" +
       "</ul><br /><a id=\"home\" class=\"link\" href=\"/\">Home</a></body></html>";
-    assertEquals(page, LoadGamesPage.draw(game));
+    assertEquals(page, LoadGamesPage.draw());
   }
 
 

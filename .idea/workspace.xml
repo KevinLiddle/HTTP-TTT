@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="474c3353-c0ae-4abf-a8c6-54aa63670955" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/images/favicon.ico" afterPath="$PROJECT_DIR$/src/views/images/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Handlers/TTTHandler.java" afterPath="$PROJECT_DIR$/src/Handlers/TTTHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/routes.txt" afterPath="$PROJECT_DIR$/src/config/routes.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/GameGUI.java" afterPath="$PROJECT_DIR$/src/models/GameGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/specs/HTTPServer/DatabaseTest.java" afterPath="$PROJECT_DIR$/src/specs/HTTPServer/DatabaseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/specs/Handlers/TTTHandlerTest.java" afterPath="$PROJECT_DIR$/src/specs/Handlers/TTTHandlerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/specs/views/DrawHTMLTest.java" afterPath="$PROJECT_DIR$/src/specs/views/DrawHTMLTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/specs/views/PlayerNamesPageTest.java" afterPath="$PROJECT_DIR$/src/specs/views/PlayerNamesPageTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/specs/views/LoadGamesPageTest.java" afterPath="$PROJECT_DIR$/src/specs/views/LoadGamesPageTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/DrawHTML.java" afterPath="$PROJECT_DIR$/src/views/DrawHTML.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/PlayerNamesPage.java" afterPath="$PROJECT_DIR$/src/views/PlayerNamesPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/home.html" afterPath="$PROJECT_DIR$/src/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/stylesheets/home.css" afterPath="$PROJECT_DIR$/src/views/stylesheets/home.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/LoadGamesPage.java" afterPath="$PROJECT_DIR$/src/views/LoadGamesPage.java" />
     </list>
     <ignored path="HTTP_TTT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,13 +75,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TTTHandler.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TTTHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Handlers/TTTHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="0" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.33506763">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="74" column="66" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DrawHTML.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/DrawHTML.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="73" selection-start="689" selection-end="756" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DrawHTMLTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/specs/views/DrawHTMLTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="47" selection-start="863" selection-end="863" vertical-scroll-proportion="0.23413111">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,15 +123,15 @@
         <option value="$PROJECT_DIR$/src/config/routes.txt" />
         <option value="$PROJECT_DIR$/src/views/html/LoadGamesPage.java" />
         <option value="$PROJECT_DIR$/src/specs/models/BoardTest.java" />
-        <option value="$PROJECT_DIR$/src/views/DrawHTML.java" />
-        <option value="$PROJECT_DIR$/src/specs/views/DrawHTMLTest.java" />
         <option value="$PROJECT_DIR$/src/views/home.html" />
         <option value="$PROJECT_DIR$/src/models/GameGUI.java" />
+        <option value="$PROJECT_DIR$/src/specs/Handlers/TTTHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/views/stylesheets/home.css" />
         <option value="$PROJECT_DIR$/src/Handlers/TTTHandler.java" />
         <option value="$PROJECT_DIR$/src/views/LoadGamesPage.java" />
         <option value="$PROJECT_DIR$/src/specs/views/LoadGamesPageTest.java" />
-        <option value="$PROJECT_DIR$/src/specs/Handlers/TTTHandlerTest.java" />
-        <option value="$PROJECT_DIR$/src/views/stylesheets/home.css" />
+        <option value="$PROJECT_DIR$/src/views/DrawHTML.java" />
+        <option value="$PROJECT_DIR$/src/specs/views/DrawHTMLTest.java" />
       </list>
     </option>
   </component>
@@ -156,6 +165,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -350,9 +361,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -505,24 +514,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="XSLT" factoryName="XSLT">
       <option name="myOutputFile" />
       <option name="myOpenOutputFile" value="false" />
@@ -537,6 +528,24 @@
       <OutputType value="CONSOLE" save-to-file="false" />
       <FileType name="XML" />
       <JdkChoice value="FROM_MODULE" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -682,11 +691,11 @@
       <item index="1" class="java.lang.String" itemvalue="JUnit.GameStateTest.emptyBoardReturnsTrueForEmptyBoard" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.BoardTest.clearsTheBoard" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.GameGUITest.machineMovesAutomatically" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Server" />
-      <item index="5" class="java.lang.String" itemvalue="Application.CLGame" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.All Tests" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.SocketCommunicationTest" />
-      <item index="8" class="java.lang.String" itemvalue="JUnit.BoardTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BoardTest" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Server" />
+      <item index="6" class="java.lang.String" itemvalue="Application.CLGame" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.All Tests" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.SocketCommunicationTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -746,7 +755,6 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -760,6 +768,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.9994658" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -811,121 +820,93 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/specs/HTTPServer/SocketCommunicationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="553" selection-end="553" vertical-scroll-proportion="0.14047867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/specs/models/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.8272633">
-          <folding />
-        </state>
+        <state line="57" column="0" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.8272633" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="30" selection-end="30" vertical-scroll-proportion="0.031217482">
-          <folding />
-        </state>
+        <state line="2" column="13" selection-start="30" selection-end="30" vertical-scroll-proportion="0.031217482" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/GameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="65" selection-end="65" vertical-scroll-proportion="0.062434964">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/views/DrawHTMLTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="24" selection-start="3760" selection-end="3760" vertical-scroll-proportion="0.70343393">
-          <folding />
-        </state>
+        <state line="4" column="13" selection-start="65" selection-end="65" vertical-scroll-proportion="0.062434964" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="448" selection-end="448" vertical-scroll-proportion="-7.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/DrawHTML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="54" selection-start="876" selection-end="876" vertical-scroll-proportion="0.09469303">
-          <folding />
-        </state>
+        <state line="12" column="8" selection-start="448" selection-end="448" vertical-scroll-proportion="-7.5" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/specs/models/GameGUITest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="234" selection-end="234" vertical-scroll-proportion="0.062434964">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/GameGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="287" selection-end="287" vertical-scroll-proportion="0.15608741">
-          <folding />
-        </state>
+        <state line="10" column="13" selection-start="234" selection-end="234" vertical-scroll-proportion="0.062434964" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/HumanPlayerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="30" selection-end="30" vertical-scroll-proportion="0.031217482">
-          <folding />
-        </state>
+        <state line="2" column="13" selection-start="30" selection-end="30" vertical-scroll-proportion="0.031217482" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/stylesheets/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="20" selection-start="482" selection-end="482" vertical-scroll-proportion="0.37460977" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/stylesheets/game.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="0.6867846" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specs/Handlers/TTTHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="22" selection-start="3849" selection-end="3849" vertical-scroll-proportion="0.54734653" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/routes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="21" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/specs/views/LoadGamesPageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="72" selection-start="1048" selection-end="1048" vertical-scroll-proportion="1.015748">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="45" column="42" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/LoadGamesPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="114" selection-start="607" selection-end="607" vertical-scroll-proportion="0.24973986">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/stylesheets/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="20" selection-start="482" selection-end="482" vertical-scroll-proportion="0.37460977">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/stylesheets/game.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="0.6867846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specs/Handlers/TTTHandlerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="22" selection-start="3849" selection-end="3849" vertical-scroll-proportion="0.54734653">
+        <state line="18" column="64" selection-start="611" selection-end="611" vertical-scroll-proportion="0.26534858">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Handlers/TTTHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.33506763">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="74" column="66" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/GameGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="22" selection-start="287" selection-end="287" vertical-scroll-proportion="0.15608741" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/DrawHTML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="73" selection-start="689" selection-end="756" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specs/views/DrawHTMLTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="47" selection-start="863" selection-end="863" vertical-scroll-proportion="0.23413111">
+          <folding />
         </state>
       </provider>
     </entry>
