@@ -2,108 +2,89 @@ package Handlers;
 
 import HTTPServer.Database;
 import models.GameGUI;
-import models.MachinePlayer;
+import models.GameState;
 import models.Player;
 import views.DrawHTML;
 import views.LoadGamesPage;
 import views.PlayerNamesPage;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
 import java.io.StringReader;
-import java.util.Date;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Iterator;
+import java.util.Map;
 
 public class TTTHandler extends Handler {
 
-  final String viewsRoot = "src/views/";
-  public GameGUI game;
-
-  public synchronized BufferedReader home(String request) throws Exception {
-    return new BufferedReader(new InputStreamReader(new FileInputStream(viewsRoot + "home.html")));
+  public static synchronized BufferedReader computerVsComputerGame(String request) throws Exception {
+    GameGUI game = new GameGUI(request);
+    int id = Database.add(game);
+    return drawBoard(id, game);
   }
 
-  public synchronized BufferedReader humanMove(String request) throws Exception {
-    if(game == null)
-      return home(request);
-    else{
-      game.takeTurn(parseMoveRequest(request));
-      return new BufferedReader(new StringReader(DrawHTML.draw(game)));
-    }
+  public static synchronized BufferedReader playerNamesForm(String request) throws Exception {
+    return new BufferedReader(new StringReader(PlayerNamesPage.draw(request)));
   }
 
-  public synchronized BufferedReader computerVsComputerGame(String request) throws Exception {
-    game = new GameGUI(request);
-    return new BufferedReader(new StringReader(DrawHTML.draw(game)));
-  }
-
-  public synchronized BufferedReader computerMove(String request) throws Exception {
-    Player player = game.findPlayerByTurn();
-    if(player instanceof MachinePlayer){
-      game.takeTurn(player.move(game.board));
-      return new BufferedReader(new StringReader(DrawHTML.draw(game)));
-    }
-    else
-      return home(request);
-  }
-
-  public synchronized BufferedReader playerNamesForm(String request) throws Exception {
-    game = new GameGUI(request);
-    return new BufferedReader(new StringReader(PlayerNamesPage.draw(game)));
-  }
-
-  public synchronized BufferedReader setPlayerNames(String request) throws Exception {
+  public static synchronized BufferedReader newGameWithHuman(String request) throws Exception {
     String[] names = parseNameRequest(request);
-    return newGameWithHuman(names);
+    return setPlayerNames(names);
   }
 
-  public synchronized BufferedReader rematch(String request) throws Exception {
+  public static synchronized BufferedReader rematch(String request) throws Exception {
+    GameGUI game = (GameGUI) Database.table().get(getID(request));
     game.reset();
     game.takeTurn(null);
-    return new BufferedReader(new StringReader(DrawHTML.draw(game)));
+    return drawBoard(getID(request), game);
   }
 
-  public synchronized BufferedReader saveGame(String request) throws Exception {
-    game.savedAt = new Date();
-    Database.table().add(game);
-    return home(request);
-  }
-
-  public synchronized BufferedReader loadGamesPage(String request) throws Exception {
+  public static synchronized BufferedReader loadGamesPage(String request) throws Exception {
+    removeCompletedGames();
     return new BufferedReader(new StringReader(LoadGamesPage.draw()));
   }
 
-  public synchronized BufferedReader loadGame(String request) throws Exception {
-    game = (GameGUI) Database.table().get(parseLoadGameRequest(request));
-    Database.table().remove(game);
-    return newGameWithHuman(new String[] {game.player1.name, game.player2.name});
+  public static synchronized BufferedReader loadGame(String request) throws Exception {
+    GameGUI game = (GameGUI) Database.table().get(parseLoadGameRequest(request));
+    return drawBoard(parseLoadGameRequest(request), game);
   }
 
-  private synchronized BufferedReader newGameWithHuman(String[] names) {
+  private static synchronized BufferedReader setPlayerNames(String[] names) throws Exception {
+    GameGUI game = new GameGUI(gameRequest(names));
+    int gameId = Database.add(game);
     Player[] players = {game.player1, game.player2};
     for(int i = 0; i < players.length; i++){
       if(names[i] != "")
         players[i].setName(names[i]);
     }
-    return new BufferedReader(new StringReader(DrawHTML.draw(game)));
+    return drawBoard(gameId, game);
   }
 
-  private synchronized int[] parseMoveRequest(String request) {
-    int[] move = new int[2];
-    Pattern pattern = Pattern.compile("\\d");
-    Matcher matcher = pattern.matcher(request);
+  private static synchronized BufferedReader drawBoard(int gameId, GameGUI game) throws Exception {
+    return new BufferedReader(new StringReader(DrawHTML.draw(gameId, game)));
+  }
 
-    int i = 0;
-    while(matcher.find()){
-      move[i] = Integer.parseInt(matcher.group());
-      i++;
+  private static synchronized void removeCompletedGames() {
+    Iterator<Map.Entry<Integer, GameGUI>> it = Database.table().entrySet().iterator();
+    while(it.hasNext()){
+      Map.Entry<Integer, GameGUI> entry = it.next();
+      if(GameState.finished(entry.getValue().board))
+        Database.table().remove(entry.getKey());
     }
-    return move;
   }
 
-  private synchronized String[] parseNameRequest(String request) {
+  private static synchronized String gameRequest(String[] playerNames) {
+    String request = "/";
+    for(int i = 0; i < playerNames.length; i++){
+      if(playerNames[i] == "")
+        request += "Computer";
+      else
+        request += "Human";
+      if(i == 0)
+        request += "Vs";
+    }
+    return request;
+  }
+
+  private static synchronized String[] parseNameRequest(String request) {
     String[] names = {"", ""};
     for(int i = 0; i < names.length; i++){
       String startingPoint = "player" + (i+1) + "Name=";
@@ -121,7 +102,7 @@ public class TTTHandler extends Handler {
     return names;
   }
 
-  private synchronized int parseLoadGameRequest(String request) {
+  private static synchronized int parseLoadGameRequest(String request) {
     String id = request.substring(request.indexOf("=") + 1);
     return Integer.parseInt(id);
   }

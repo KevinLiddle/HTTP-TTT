@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
+import static org.junit.Assert.assertArrayEquals;
 
 public class DatabaseTest {
 
@@ -15,13 +16,14 @@ public class DatabaseTest {
 
   @Before
   public void setUp(){
+    Database.table().clear();
     obj = new GameGUI("/HumanVsHuman");
-    Database.table().add(obj);
+    Database.add(obj);
   }
 
   @After
   public void tearDown() {
-    Database.table().remove(obj);
+    Database.table().clear();
   }
 
   @Test
@@ -29,5 +31,16 @@ public class DatabaseTest {
     assertEquals(1, Database.table().size());
     assertTrue(Database.table().get(0) instanceof GameGUI);
   }
+
+  @Test
+  public void getIndexesReturnsArrayOfAllIndexes() {
+    assertArrayEquals(new int[]{0}, Database.ids());
+  }
+
+  @Test
+  public void addingAnObjectReturnsItsIndex() {
+    assertEquals(1, Database.add(new GameGUI("/HumanVsHuman")));
+  }
+
 
 }

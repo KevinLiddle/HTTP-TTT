@@ -22,18 +22,15 @@ public class LoadGamesPageTest {
     game.player2.name = "Nivek";
   }
 
-
-
-
   @After
   public void tearDown() {
-    Database.table().remove(Database.table().remove(game));
+    Database.table().clear();
   }
 
   @Test
   public void drawDisplaysTheLoadGamesPageWithOneGame() {
-    game.savedAt = new Date();
-    Database.table().add(game);
+    game.createdAt = new Date();
+    Database.add(game);
     String page = "<html><head>" +
       "<title>Tic Tac Toe</title>" +
       "<link rel=\"icon\" href=\"favicon.ico\" type=\"image/icon\" />" +
@@ -41,7 +38,7 @@ public class LoadGamesPageTest {
       "</head><body>\n" +
       "<h2>Saved Games:</h2>\n" +
       "<ul>\n" +
-      "<li><a href=\"/loadGame?id=0\">Kevin vs. Nivek - " + game.savedAt + "</a></li>" +
+      "<li><a href=\"/loadGame?id=0\">Kevin vs. Nivek - " + game.createdAt + "</a></li>" +
       "</ul><br /><a id=\"home\" class=\"link\" href=\"/\">Home</a></body></html>";
     assertEquals(page, LoadGamesPage.draw());
   }

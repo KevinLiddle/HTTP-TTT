@@ -10,14 +10,9 @@ public class ApplicationResponder {
 
   public final String OK = "200 OK";
   public final String NOT_FOUND = "404 Not Found";
-  public Handler handler;
-
-  public ApplicationResponder(Handler _handler) {
-    handler = _handler;
-  }
 
   public synchronized String serverResponse(String[] request) throws Exception {
-    BufferedReader content = handler.execute(request[1]);
+    BufferedReader content = Handler.execute(request[1]);
     String output = "";
     String line = content.readLine();
     while(line != null) {

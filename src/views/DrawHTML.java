@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class DrawHTML extends Draw {
   
-  public static String draw(GameGUI game) {
+  public static String draw(int gameId, GameGUI game) {
     String drawnBoard = "<html><head>" +
       "<title>Tic Tac Toe</title>" +
       "<link rel=\"icon\" href=\"favicon.ico\" type=\"image/icon\" />" +
@@ -22,24 +22,22 @@ public class DrawHTML extends Draw {
     for (int i = 0; i < game.board.dimension; i++) {
       drawnBoard += "<tr>\n";
       for (int j = 0; j < game.board.dimension; j++) {
-        drawnBoard += "<td>" + markerHTML(game, i, j) + "</td>\n";
+        drawnBoard += "<td>" + markerHTML(gameId, game, i, j) + "</td>\n";
       }
       drawnBoard += "</tr>\n";
     }
     drawnBoard += "</table>";
 
     if(GameState.finished(game.board))
-      drawnBoard += gameOverMessage(game);
+      drawnBoard += gameOverMessage(gameId, game);
     else if(displayComputerMoveLink(game)){
-      drawnBoard += "<br /><a class=\"button\" href=\"/ComputerMove\">Computer Moves</a>";
+      drawnBoard += "<br /><a class=\"button\" href=\"/" + gameId + "/ComputerMove\">Computer Moves</a>";
     }
     drawnBoard += "<br /><a id=\"home\" class=\"link\" href=\"/\">Home</a>";
-    if(!GameState.finished(game.board) && !game.board.empty())
-      drawnBoard += "<br /><a class=\"link\" href=\"/saveGame\">Save Game</a>";
     return drawnBoard + "</body></html>";
   }
 
-  public static String gameOverMessage(GameGUI game) {
+  public static String gameOverMessage(int gameId, GameGUI game) {
     String message = "<br />";
     if(GameState.winner(game.board) == 1)
       message += "<p>" + game.player1.name + " Wins!</p>";
@@ -48,11 +46,11 @@ public class DrawHTML extends Draw {
     else
       message += "<p>" + "Cat's Game...</p>";
     message += "<br />" +
-               "<a class=\"link\" href=\"/rematch\">Rematch</a>";
+               "<a class=\"link\" href=\"/" + gameId + "/rematch\">Rematch</a>";
     return message;
   }
 
-  private static String markerHTML(GameGUI game, int row, int column) {
+  private static String markerHTML(int gameId, GameGUI game, int row, int column) {
     String value = marker(game.board, row, column);
     if(value != " "){
       return "<p class=\"" + moveType(game, row, column) + "marker\">" + value + "</p>";
@@ -60,7 +58,7 @@ public class DrawHTML extends Draw {
     else if(GameState.finished(game.board))
       return "<p class=\"board_links\">-</p>";
     else
-      return "<a class=\"board_links\" href=\"/board?row=" + row + "&column=" + column + "\">----</a>";
+      return "<a class=\"board_links\" href=\"/" + gameId + "/board?row=" + row + "&column=" + column + "\">----</a>";
   }
 
   private static String moveType(GameGUI game, int row, int column) {

@@ -8,12 +8,13 @@ public class GameGUI extends Game {
   public String[] validGameTypes = {"/HumanVsHuman", "/HumanVsComputer", "/ComputerVsHuman", "/ComputerVsComputer"};
   public int turn;
   public int[] lastMove;
-  public Date savedAt;
+  public Date createdAt;
 
   public GameGUI(String _gameType) {
     board = new Board();
     gameType = _gameType;
     turn = 1;
+    createdAt = new Date();
     createPlayers();
   }
 
@@ -80,5 +81,6 @@ public class GameGUI extends Game {
   public void reset() {
     board.clear();
     turn = 1;
+    createdAt = new Date();
   }
 }

@@ -6,7 +6,6 @@ import org.junit.Before;
 import org.junit.Test;
 import views.DrawHTML;
 
-import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
 
 public class DrawHTMLTest {
@@ -37,7 +36,7 @@ public class DrawHTMLTest {
       "<td><p class=\"board_links\">-</p></td>\n" +
       "<td><p class=\"marker\">X</p></td>\n" +
       "</tr>\n" +
-      "</table><br /><p>Player 1 Wins!</p><br /><a class=\"link\" href=\"/rematch\">Rematch</a>" + htmlFooter;
+      "</table><br /><p>Player 1 Wins!</p><br /><a class=\"link\" href=\"/0/rematch\">Rematch</a>" + htmlFooter;
 
   @Before
   public void setUp() {
@@ -58,43 +57,34 @@ public class DrawHTMLTest {
       "<p class=\"turn\">Player 1's turn</p>" +
       "<table border=\"2\" bordercolor=\"#32A5F5\">\n" +
       "<tr>\n" +
-      "<td><a class=\"board_links\" href=\"/board?row=0&column=0\">----</a></td>\n" +
-      "<td><a class=\"board_links\" href=\"/board?row=0&column=1\">----</a></td>\n" +
-      "<td><a class=\"board_links\" href=\"/board?row=0&column=2\">----</a></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=0&column=0\">----</a></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=0&column=1\">----</a></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=0&column=2\">----</a></td>\n" +
       "</tr>\n" +
       "<tr>\n" +
-      "<td><a class=\"board_links\" href=\"/board?row=1&column=0\">----</a></td>\n" +
-      "<td><a class=\"board_links\" href=\"/board?row=1&column=1\">----</a></td>\n" +
-      "<td><a class=\"board_links\" href=\"/board?row=1&column=2\">----</a></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=1&column=0\">----</a></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=1&column=1\">----</a></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=1&column=2\">----</a></td>\n" +
       "</tr>\n" +
       "<tr>\n" +
-      "<td><a class=\"board_links\" href=\"/board?row=2&column=0\">----</a></td>\n" +
-      "<td><a class=\"board_links\" href=\"/board?row=2&column=1\">----</a></td>\n" +
-      "<td><a class=\"board_links\" href=\"/board?row=2&column=2\">----</a></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=2&column=0\">----</a></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=2&column=1\">----</a></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=2&column=2\">----</a></td>\n" +
       "</tr>\n" +
       "</table>" + htmlFooter;
-    Assert.assertEquals(blankHTMLBoard, DrawHTML.draw(game));
+    Assert.assertEquals(blankHTMLBoard, DrawHTML.draw(0, game));
   }
 
   @Test
   public void drawPartiallyFilledInBoard() {
     setXWinner();
-    Assert.assertEquals(winningBoard, DrawHTML.draw(game));
+    Assert.assertEquals(winningBoard, DrawHTML.draw(0, game));
   }
 
   @Test
   public void drawComputerMoveLinkWhenNecessary() {
     game = new GameGUI("/ComputerVsComputer");
-    assertTrue(DrawHTML.draw(game).contains("<a class=\"button\" href=\"/ComputerMove\">Computer Moves</a>"));
-  }
-
-  @Test
-  public void saveGameLinkAppearsMidGame() {
-    game = new GameGUI("/HumanVsComputer");
-    assertFalse(DrawHTML.draw(game).contains("Save Game"));
-    game.takeTurn(new int[] {0,0});
-    game.takeTurn(null);
-    assertTrue(DrawHTML.draw(game).contains("Save Game"));
+    assertTrue(DrawHTML.draw(0, game).contains("<a class=\"button\" href=\"/0/ComputerMove\">Computer Moves</a>"));
   }
 
 

@@ -14,9 +14,9 @@ public class LoadGamesPage {
       "</head><body>\n" +
       "<h2>Saved Games:</h2>\n" +
       "<ul>\n";
-    for(int i = 0; i < Database.table().size(); i++){
-      game = (GameGUI) Database.table().get(i);
-      output += "<li><a href=\"/loadGame?id=" + i + "\">" + game.player1.name + " vs. " + game.player2.name + " - " + game.savedAt + "</a></li>";
+    for(int index = 0; index < Database.ids().length; index++){
+      game = (GameGUI) Database.table().get(Database.ids()[index]);
+      output += "<li><a href=\"/loadGame?id=" + Database.ids()[index] + "\">" + game.player1.name + " vs. " + game.player2.name + " - " + game.createdAt + "</a></li>";
     }
     output += "</ul>" +
       "<br /><a id=\"home\" class=\"link\" href=\"/\">Home</a>" +

@@ -1,13 +1,15 @@
 package Handlers;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.lang.reflect.Method;
 
 public abstract class Handler {
 
-  final String viewsRoot = "src/views/";
+  final static String viewsRoot = "src/views/";
 
-  public synchronized BufferedReader execute(String request) throws Exception {
+  public static synchronized BufferedReader execute(String request) throws Exception {
     BufferedReader br = new BufferedReader(new FileReader(new File("src/config/routes.txt")));
     String line = br.readLine();
     while(line != null){
@@ -20,24 +22,28 @@ public abstract class Handler {
     return notFound(request);
   }
 
-  public synchronized BufferedReader notFound(String request) throws Exception {
-    return new BufferedReader(new InputStreamReader(new FileInputStream(viewsRoot + "404NotFound.html")));
+  public static synchronized BufferedReader notFound(String request) throws Exception {
+    return readFile("404NotFound.html");
   }
 
-  public synchronized BufferedReader stylesheets(String request) throws Exception {
-    return new BufferedReader(new FileReader(new File(viewsRoot + "stylesheets" + request)));
+  protected static synchronized BufferedReader readFile(String location) throws Exception {
+    return readFile(location, "");
   }
 
-  public synchronized BufferedReader javascripts(String request) throws Exception {
-    return new BufferedReader(new FileReader(new File(viewsRoot + "javascripts" + request)));
+  protected static synchronized BufferedReader readFile(String location, String request) throws Exception {
+    String[] route = request.split("/");
+    request = route[route.length - 1];
+    return new BufferedReader(new FileReader(new File(viewsRoot + location + "/" + request)));
   }
 
-  public synchronized BufferedReader images(String request) throws Exception {
-    return new BufferedReader(new FileReader(new File(viewsRoot + "images" + request)));
+  protected static synchronized int getID(String request) {
+    return Integer.parseInt(request.split("/")[1]);
   }
 
-  private synchronized BufferedReader callMethod(String methodName, String request) throws Exception {
-    Method method = this.getClass().getMethod(methodName, String.class);
-    return (BufferedReader) method.invoke(this, request);
+  private static synchronized BufferedReader callMethod(String methodName, String request) throws Exception {
+    String[] route = methodName.split("#");
+    Class<?> handlerClass = Class.forName("Handlers." + route[0]);
+    Method method = handlerClass.getMethod(route[1], String.class);
+    return (BufferedReader) method.invoke(null, request);
   }
 }

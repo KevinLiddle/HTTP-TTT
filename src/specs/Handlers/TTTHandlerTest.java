@@ -1,157 +1,140 @@
 package specs.Handlers;
 
 import HTTPServer.Database;
-import Handlers.TTTHandler;
+import Handlers.Handler;
 import models.GameGUI;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.BufferedReader;
-import java.util.Date;
-
 import static junit.framework.Assert.*;
 
 public class TTTHandlerTest {
 
-  TTTHandler handler;
-
   @Before
   public void setUp() {
-    handler = new TTTHandler();
+    Database.table().clear();
   }
 
   @After
   public void tearDown() {
-    Database.table().remove(handler.game);
-  }
-
-  @Test
-  public void executeCallsHomeForAHomeRequest() throws Exception {
-    assertTrue(homePage(handler.execute("/")));
+    Database.table().clear();
   }
 
   @Test
   public void executeCallsNewGameForValidNewGameRequest() throws Exception {
-    handler.execute("/HumanVsComputer");
-    assertTrue(gamePage(handler.execute("/setName?player1Name=Kevin")));
+    Handler.execute("/HumanVsComputer");
+    assertTrue(HandlerTestHelpers.gamePage(Handler.execute("/setName?player1Name=Kevin")));
   }
 
   @Test
   public void executeCallsNewGameForAnotherValidGameRequest() throws Exception {
-    assertTrue(gamePage(handler.execute("/ComputerVsComputer")));
-  }
-
-  @Test
-  public void executeCallsHumanMoveForValidBoardRequest() throws Exception {
-    handler.execute("/HumanVsHuman");
-    assertTrue(gamePage(handler.execute("/board?row=0&column=0")));
-  }
-
-  @Test
-  public void executeCallsNotFoundForInvalidMoveRequest() throws Exception {
-    assertTrue(notFoundPage(handler.execute("/board?row=3&column=0")));
+    assertTrue(HandlerTestHelpers.gamePage(Handler.execute("/ComputerVsComputer")));
   }
 
   @Test
   public void executeCallsNotFoundForRoutesNotFound() throws Exception {
-    assertTrue(notFoundPage(handler.execute("/KarateKid")));
+    assertTrue(HandlerTestHelpers.notFoundPage(Handler.execute("/KarateKid")));
   }
 
   @Test
   public void setPlayerNamesParsesFormRequestAndSetsPlayerNames() throws Exception {
-    handler.execute("/HumanVsComputer");
-    handler.execute("/setName?player1Name=Kevin");
-    assertEquals("Kevin", handler.game.player1.name);
-    assertEquals("TicTacTobot 2000", handler.game.player2.name);
+    Handler.execute("/HumanVsComputer");
+    Handler.execute("/setName?player1Name=Kevin");
+    GameGUI game = (GameGUI) Database.table().get(0);
+    assertEquals("Kevin", game.player1.name);
+    assertEquals("TicTacTobot 2000", game.player2.name);
   }
 
   @Test
   public void gameBeginsAfterNamesSet() throws Exception {
-    handler.execute("/HumanVsHuman");
-    handler.execute("/setName?player1Name=Kevin&player2Name=Paul");
-    assertEquals("Kevin", handler.game.player1.name);
-    assertEquals("Paul", handler.game.player2.name);
+    Handler.execute("/HumanVsHuman");
+    Handler.execute("/setName?player1Name=Kevin&player2Name=Paul");
+    GameGUI game = (GameGUI) Database.table().get(0);
+    assertEquals("Kevin", game.player1.name);
+    assertEquals("Paul", game.player2.name);
   }
 
   @Test
   public void rematchClearsCurrentGameBoard() throws Exception {
     setUpGame();
-    assertFalse(handler.game.board.empty());
-    handler.execute("/rematch");
-    assertTrue(handler.game.board.empty()); 
+    GameGUI game = (GameGUI) Database.table().get(0);
+    assertFalse(game.board.empty());
+    Handler.execute("/0/rematch");
+    assertTrue(game.board.empty());
   }
 
   @Test
   public void saveGameSavesCurrentGameObjectToServer() throws Exception {
     setUpGame();
-    assertTrue(homePage(handler.execute("/saveGame")));
-    assertTrue(Database.table().contains(handler.game));
+    GameGUI game = (GameGUI) Database.table().get(0);
+    assertTrue(Database.table().contains(game));
   }
 
   @Test
   public void loadGameBringsUserToBoardOfLoadedGame() throws Exception {
     setUpGame();
-    assertTrue(homePage(handler.execute("/saveGame")));
-    handler.execute("/loadGames");
-    assertTrue(gameInProgress(handler.execute("/loadGame?id=0")));
+    Handler.execute("/loadGames");
+    assertTrue(HandlerTestHelpers.gameInProgress(Handler.execute("/loadGame?id=0")));
   }
 
   @Test
-  public void loadGameRemovesGameFromDatabase() throws Exception {
+  public void finishingAGameRemovesItFromDB() throws Exception {
     setUpGame();
-    handler.execute("/saveGame");
-    assertTrue(readDocument(handler.execute("/loadGames")).contains("Kevin vs. Nivek"));
-    handler.loadGame("/loadGame?id=0");
-    assertFalse(readDocument(handler.execute("/loadGames")).contains("Kevin vs. Nivek"));
+    Handler.execute("/0/board?row=1&column=1");
+    Handler.execute("/0/board?row=0&column=1");
+    Handler.execute("/0/board?row=2&column=2");
+    Handler.execute("/0/board?row=0&column=2");
+    assertFalse(HandlerTestHelpers.readDocument(Handler.execute("/loadGames")).contains("Kevin vs. Nivek"));
   }
+
+
+//  @Test
+//  public void saveGameSetsGamesSavedAtFieldToToday() throws Exception {
+//    setUpGame();
+//    GameGUI game = (GameGUI) Database.table().get(0);
+//    Date today = new Date();
+//    assertEquals(today.getDate(), game.createdAt.getDate());
+//  }
 
   @Test
-  public void saveGameSetsGamesSavedAtFieldToToday() throws Exception {
+  public void savedGamesPickUpWhereTheyLeftOff() throws Exception {
     setUpGame();
-    handler.execute("/saveGame");
-    GameGUI game = (GameGUI) Database.table().get(0);
-    Date today = new Date();
-    assertEquals(today.getDate(), game.savedAt.getDate());
+    Handler.execute("/0/saveGame");
+    assertEquals("<html><head>" +
+      "<title>Tic Tac Toe</title>" +
+      "<link rel=\"icon\" href=\"favicon.ico\" type=\"image/icon\" />" +
+      "<link rel=\"stylesheet\" href=\"game.css\" type=\"text/css\" />" +
+      "<script src=\"jquery.js\" type=\"text/javascript\"></script>" +
+      "<script src=\"machinePlayer.js\" type=\"text/javascript\"></script>" +
+      "</head><body><h2>Kevin(X) vs. Nivek(O)</h2>" +
+      "<p class=\"turn\">Nivek's turn</p>" +
+      "<table border=\"2\" bordercolor=\"#32A5F5\">\n" +
+      "<tr>\n" +
+      "<td><p class=\"marker\">X</p></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=0&column=1\">----</a></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=0&column=2\">----</a></td>\n" +
+      "</tr>\n" +
+      "<tr>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=1&column=0\">----</a></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=1&column=1\">----</a></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=1&column=2\">----</a></td>\n" +
+      "</tr>\n" +
+      "<tr>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=2&column=0\">----</a></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=2&column=1\">----</a></td>\n" +
+      "<td><a class=\"board_links\" href=\"/0/board?row=2&column=2\">----</a></td>\n" +
+      "</tr>\n" +
+      "</table>" +
+      "<br /><a id=\"home\" class=\"link\" href=\"/\">Home</a>" +
+      "</body></html>\n",
+      HandlerTestHelpers.readDocument(Handler.execute("/loadGame?id=0")));
+    assertEquals(1, ((GameGUI) Database.table().get(0)).board.cellValueAt(new int[]{0, 0}));
   }
 
-
-  private boolean homePage(BufferedReader br) throws Exception {
-    return page(br, "Human vs. Human");
-  }
-
-  private boolean gamePage(BufferedReader br) throws Exception {
-    return page(br, "table");
-  }
-
-  private boolean notFoundPage(BufferedReader br) throws Exception {
-    return page(br, "Not Found");
-  }
-
-  private boolean gameInProgress(BufferedReader br) throws Exception {
-    String document = readDocument(br);
-    return (document.contains("table") && document.contains("X"));
-  }
-
-  private boolean page(BufferedReader br, String pageElement) throws Exception {
-    return readDocument(br).contains(pageElement);
-  }
-
-  private void setUpGame() {
-    handler.game = new GameGUI("/HumanVsHuman");
-    handler.game.player1.setName("Kevin");
-    handler.game.player2.setName("Nivek");
-    handler.game.takeTurn(new int[] {0,0});
-  }
-
-  private String readDocument(BufferedReader br) throws Exception {
-    String line = br.readLine();
-    String document = "";
-    while(line != null){
-      document += line + "\n";
-      line = br.readLine();
-    }
-    return document;
+  private void setUpGame() throws Exception {
+    Handler.execute("/setName?player1Name=Kevin&player2Name=Nivek");
+    Handler.execute("/0/board?row=0&column=0");
   }
 
 }

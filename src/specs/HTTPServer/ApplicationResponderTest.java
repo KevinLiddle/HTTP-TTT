@@ -1,7 +1,6 @@
 package specs.HTTPServer;
 
 import HTTPServer.ApplicationResponder;
-import Handlers.TTTHandler;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,29 +13,30 @@ public class ApplicationResponderTest {
 
   @Before
   public void setUp() throws Exception {
-    app = new ApplicationResponder(new TTTHandler());
+    app = new ApplicationResponder();
     app.serverResponse(new String[] {"GET", "/HumanVsComputer", "HTTP/1.0"});
   }
 
   @Test
   public void validBoardURIsMatchValidBoardMove() throws Exception {
-    assertEquals(app.OK, app.status("/board?row=0&column=0"));
+    assertEquals(app.OK, app.status("/0/board?row=0&column=0"));
   }
 
   @Test
   public void validBoardURIsDontMatchInvalidURI() throws Exception {
-    assertEquals(app.NOT_FOUND, app.status("/board?row=0&column=0rgkhr"));
+    assertEquals(app.NOT_FOUND, app.status("/0/board?row=0&column=0rgkhr"));
   }
 
   @Test
   public void validBoardURIsDontMatchInvalidMove() throws Exception {
-    assertEquals(app.NOT_FOUND, app.status("/board?row=0&column=3"));
+    assertEquals(app.NOT_FOUND, app.status("/0/board?row=0&column=3"));
   }
 
   @Test
   public void computerCannotMoveIfNotItsTurn() throws Exception {
-    assertEquals(app.OK, app.status("/ComputerMove"));
-    assertTrue(app.serverResponse(new String[]{"GET", "/ComputerMove", "HTTP/1.0"}).contains("Please select a game type:"));
+    assertEquals(app.OK, app.status("/0/ComputerMove"));
+    app.serverResponse(new String[]{"GET", "/setName?player1Name=Kevin", "HTTP/1.0"});
+    assertTrue(app.serverResponse(new String[]{"GET", "/0/ComputerMove", "HTTP/1.0"}).contains("Please select a game type:"));
   }
 
 

@@ -1,7 +1,5 @@
 package HTTPServer;
 
-import Handlers.TTTHandler;
-
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -15,7 +13,7 @@ public class Server implements Runnable {
   private boolean running = false;
 
   public static void main(String args[]) throws Exception {
-    SocketCommunication client = new SocketCommunication(new ApplicationResponder(new TTTHandler()));
+    SocketCommunication client = new SocketCommunication(new ApplicationResponder());
     Server server = new Server(3000, client);
     server.start();
   }
@@ -86,13 +84,8 @@ public class Server implements Runnable {
         connectionServer.serve(clientSocket);
         connectionServer.close(clientSocket);
       } catch (Exception e) {
-        StackTraceElement[] stackTraceElements = e.getStackTrace();
-        System.out.println(e);
-        for(StackTraceElement ste : stackTraceElements){
-          System.out.println(ste.getFileName() + " : " + ste.getLineNumber());
-        }
+        e.printStackTrace();
       }
-
     }
   }
 }

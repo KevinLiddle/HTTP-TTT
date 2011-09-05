@@ -3,7 +3,6 @@ package specs.HTTPServer;
 import HTTPServer.ApplicationResponder;
 import HTTPServer.Server;
 import HTTPServer.SocketCommunication;
-import Handlers.TTTHandler;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,7 +25,7 @@ public class SocketCommunicationTest {
 
   @Before
   public void setUp() throws Exception {
-    client = new SocketCommunication(new ApplicationResponder(new TTTHandler()));
+    client = new SocketCommunication(new ApplicationResponder());
     socket = new Socket();
     server = new Server(3000, client);
     server.start();
