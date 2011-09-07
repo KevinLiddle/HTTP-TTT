@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
+import java.util.LinkedList;
 
 public class Server implements Runnable {
 
@@ -11,6 +12,7 @@ public class Server implements Runnable {
   private int connections = 0;
   private ConnectionServer connectionServer;
   private boolean running = false;
+  private LinkedList<Thread> threads = new LinkedList<Thread>();
 
   public static void main(String args[]) throws Exception {
     SocketCommunication client = new SocketCommunication(new ApplicationResponder());
@@ -57,8 +59,9 @@ public class Server implements Runnable {
     }
   }
 
-  private void serveConnection(Socket clientSocket) throws Exception {
-    new Thread(new ConnectionServerDriver(clientSocket)).start();
+  private void serveConnection(Socket clientSocket) {
+    threads.add(new Thread(new ConnectionServerDriver(clientSocket)));
+    threads.getLast().start();
   }
 
   private void waitForClose() {
@@ -84,6 +87,8 @@ public class Server implements Runnable {
         connectionServer.serve(clientSocket);
         connectionServer.close(clientSocket);
       } catch (Exception e) {
+        Thread lastThread = threads.removeLast();
+        lastThread = null;
         e.printStackTrace();
       }
     }

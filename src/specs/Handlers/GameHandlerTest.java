@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import static junit.framework.Assert.*;
 
-public class TTTHandlerTest {
+public class GameHandlerTest {
 
   @Before
   public void setUp() {
@@ -65,11 +65,18 @@ public class TTTHandlerTest {
   }
 
   @Test
-  public void saveGameSavesCurrentGameObjectToServer() throws Exception {
+  public void incompleteGamesSavedToDatabase() throws Exception {
     setUpGame();
     GameGUI game = (GameGUI) Database.table().get(0);
     assertTrue(Database.table().contains(game));
   }
+
+  @Test
+  public void unstartedGamesAreNotSaved() throws Exception {
+    Handler.execute("/setName?player1Name=Kevin&player2Name=Nivek");
+    assertFalse(HandlerTestHelpers.page(Handler.execute("/loadGames"), "Kevin vs. Nivek"));
+  }
+
 
   @Test
   public void loadGameBringsUserToBoardOfLoadedGame() throws Exception {
@@ -87,15 +94,6 @@ public class TTTHandlerTest {
     Handler.execute("/0/board?row=0&column=2");
     assertFalse(HandlerTestHelpers.readDocument(Handler.execute("/loadGames")).contains("Kevin vs. Nivek"));
   }
-
-
-//  @Test
-//  public void saveGameSetsGamesSavedAtFieldToToday() throws Exception {
-//    setUpGame();
-//    GameGUI game = (GameGUI) Database.table().get(0);
-//    Date today = new Date();
-//    assertEquals(today.getDate(), game.createdAt.getDate());
-//  }
 
   @Test
   public void savedGamesPickUpWhereTheyLeftOff() throws Exception {

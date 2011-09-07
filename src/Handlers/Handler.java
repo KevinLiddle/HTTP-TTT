@@ -10,19 +10,26 @@ public abstract class Handler {
   final static String viewsRoot = "src/views/";
 
   public static synchronized BufferedReader execute(String request) throws Exception {
-    BufferedReader br = new BufferedReader(new FileReader(new File("src/config/routes.txt")));
-    String line = br.readLine();
-    while(line != null){
-      String[] route = line.split("\\s*->\\s*");
-      if(request.matches(route[0])){
-        return callMethod(route[1], request);
+    try{
+      BufferedReader br = new BufferedReader(new FileReader(new File("src/config/routes.txt")));
+      String line = br.readLine();
+      while(line != null){
+        String[] route = line.split("\\s*->\\s*");
+        if(request.matches(route[0]))
+          return callMethod(route[1], request);
+        line = br.readLine();
       }
-      line = br.readLine();
+      return notFound();
+    } catch(Exception e) {
+      return error();
     }
-    return notFound(request);
   }
 
-  public static synchronized BufferedReader notFound(String request) throws Exception {
+  private static BufferedReader error() throws Exception {
+    return readFile("error.html");
+  }
+
+  public static synchronized BufferedReader notFound() throws Exception {
     return readFile("404NotFound.html");
   }
 

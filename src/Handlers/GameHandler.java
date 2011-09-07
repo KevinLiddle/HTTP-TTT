@@ -13,7 +13,7 @@ import java.io.StringReader;
 import java.util.Iterator;
 import java.util.Map;
 
-public class TTTHandler extends Handler {
+public class GameHandler extends Handler {
 
   public static synchronized BufferedReader computerVsComputerGame(String request) throws Exception {
     GameGUI game = new GameGUI(request);
@@ -38,7 +38,7 @@ public class TTTHandler extends Handler {
   }
 
   public static synchronized BufferedReader loadGamesPage(String request) throws Exception {
-    removeCompletedGames();
+    removeCompletedAndUnstartedGames();
     return new BufferedReader(new StringReader(LoadGamesPage.draw()));
   }
 
@@ -62,11 +62,11 @@ public class TTTHandler extends Handler {
     return new BufferedReader(new StringReader(DrawHTML.draw(gameId, game)));
   }
 
-  private static synchronized void removeCompletedGames() {
+  private static synchronized void removeCompletedAndUnstartedGames() {
     Iterator<Map.Entry<Integer, GameGUI>> it = Database.table().entrySet().iterator();
     while(it.hasNext()){
       Map.Entry<Integer, GameGUI> entry = it.next();
-      if(GameState.finished(entry.getValue().board))
+      if(GameState.empty(entry.getValue().board) || GameState.finished(entry.getValue().board))
         Database.table().remove(entry.getKey());
     }
   }
