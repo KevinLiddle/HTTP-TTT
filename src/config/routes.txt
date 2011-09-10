@@ -1,3 +1,9 @@
+///   place routes in here in the format listed below:
+///   /path/name/regex        -> PathHandlerName#callbackMethod
+///   and create a handler with given Handler name that inherits from Handler
+///   this handler should have a callback method to be performed for the given route
+
+
 /*\d*/\w+.css                             -> GUIHandler#stylesheets
 /*\d*/\w+.js                              -> GUIHandler#javascripts
 /*\d*/\w+.(ico|png|jpg)                   -> GUIHandler#images

@@ -64,6 +64,11 @@ public class Server implements Runnable {
     threads.getLast().start();
   }
 
+  private void killLastThread() {
+    Thread lastThread = threads.removeLast();
+    lastThread = null;
+  }
+
   private void waitForClose() {
     try {
       Thread.sleep(10); // let close finish
@@ -76,6 +81,10 @@ public class Server implements Runnable {
     return connections;
   }
 
+  public int getThreadCount() {
+    return threads.size();
+  }
+
   private class ConnectionServerDriver implements Runnable {
     private Socket clientSocket;
 
@@ -86,9 +95,9 @@ public class Server implements Runnable {
       try {
         connectionServer.serve(clientSocket);
         connectionServer.close(clientSocket);
+        killLastThread();
       } catch (Exception e) {
-        Thread lastThread = threads.removeLast();
-        lastThread = null;
+        killLastThread();
         e.printStackTrace();
       }
     }

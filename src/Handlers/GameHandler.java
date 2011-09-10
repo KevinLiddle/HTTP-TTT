@@ -22,7 +22,7 @@ public class GameHandler extends Handler {
   }
 
   public static synchronized BufferedReader playerNamesForm(String request) throws Exception {
-    return new BufferedReader(new StringReader(PlayerNamesPage.draw(request)));
+    return renderHTMLString(PlayerNamesPage.draw(request));
   }
 
   public static synchronized BufferedReader newGameWithHuman(String request) throws Exception {
@@ -59,7 +59,7 @@ public class GameHandler extends Handler {
   }
 
   private static synchronized BufferedReader drawBoard(int gameId, GameGUI game) throws Exception {
-    return new BufferedReader(new StringReader(DrawHTML.draw(gameId, game)));
+    return renderHTMLString(DrawHTML.draw(gameId, game));
   }
 
   private static synchronized void removeCompletedAndUnstartedGames() {

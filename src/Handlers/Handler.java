@@ -3,6 +3,7 @@ package Handlers;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.StringReader;
 import java.lang.reflect.Method;
 
 public abstract class Handler {
@@ -15,7 +16,7 @@ public abstract class Handler {
       String line = br.readLine();
       while(line != null){
         String[] route = line.split("\\s*->\\s*");
-        if(request.matches(route[0]))
+        if(!line.startsWith("///") && request.matches(route[0]))
           return callMethod(route[1], request);
         line = br.readLine();
       }
@@ -31,6 +32,10 @@ public abstract class Handler {
 
   public static synchronized BufferedReader notFound() throws Exception {
     return readFile("404NotFound.html");
+  }
+
+  protected static synchronized BufferedReader renderHTMLString(String output) {
+    return new BufferedReader(new StringReader(output));
   }
 
   protected static synchronized BufferedReader readFile(String location) throws Exception {
