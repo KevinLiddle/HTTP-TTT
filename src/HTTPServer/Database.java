@@ -1,5 +1,6 @@
 package HTTPServer;
 
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
@@ -32,8 +33,10 @@ public class Database {
 
   private static int getMaxId() {
     int maxIndex = 0;
+    int[] IDs = ids();
+    Arrays.sort(IDs);
     for(int i = 0; i < ids().length; i++){
-      if(ids()[i] >= maxIndex)
+      if(IDs[i] >= maxIndex)
         maxIndex = i + 1;
     }
     return maxIndex;
